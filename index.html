@@ -440,13 +440,11 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
 <script>
 (function(){
   var pct=document.getElementById('loader-pct'),bar=document.getElementById('loader-bar'),loader=document.getElementById('loader');
-  var progress=0,loaded=false;
-  window.addEventListener('load',function(){loaded=true;});
+  var duration=2500,start=Date.now();
   function tick(){
-    if(loaded){progress+=(100-progress)*0.3;}
-    else{progress+=(85-progress)*0.04;}
-    if(progress>99.5){progress=100;}
-    var p=Math.round(progress);
+    var elapsed=Date.now()-start;
+    var progress=Math.min(elapsed/duration,1);
+    var p=Math.round(progress*100);
     pct.textContent=p+'%';
     bar.style.width=p+'%';
     if(p>=100){
