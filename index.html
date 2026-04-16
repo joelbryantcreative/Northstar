@@ -18,9 +18,10 @@ body{background:#0e0b07;color:#f4efe6;font-family:'SF Pro Display',system-ui,san
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.055;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay;}
 
 /* ─── NAV ─── */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 40px;height:60px;display:flex;align-items:center;justify-content:space-between;}
-.nav-logo img{height:20px;display:block;filter:brightness(0) invert(1);opacity:0.9;}
-.nav-apply{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#f4efe6;text-decoration:none;opacity:0.7;transition:opacity 0.2s;}
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 40px;height:60px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;}
+.nav-logo{display:flex;justify-content:center;}
+.nav-logo img{height:18px;display:block;filter:brightness(0) invert(1);opacity:0.85;}
+.nav-apply{font-size:0.6rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:#f4efe6;text-decoration:none;opacity:0.6;transition:opacity 0.2s;justify-self:end;}
 .nav-apply:hover{opacity:1;}
 
 /* ─── HERO ─── */
@@ -173,7 +174,8 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
 
 <!-- NAV -->
 <nav>
-  <a href="#"><img src="images/Main-Logo.png" alt="Northstar"></a>
+  <div></div>
+  <a href="#" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar"></a>
   <a href="#apply" class="nav-apply">Apply to join</a>
 </nav>
 
