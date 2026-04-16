@@ -104,13 +104,18 @@ nav.scrolled{background:#28221b;box-shadow:0 1px 0 rgba(244,239,230,0.07);}
 
 /* ─── PILLARS ─── */
 .pillars{background:#28221b;border-bottom:1px solid rgba(244,239,230,0.07);}
-.pillars-header{max-width:1100px;margin:0 auto 72px;display:grid;grid-template-columns:1fr 1fr;gap:100px;align-items:end;}
+.pillars-header{max-width:900px;margin:0 auto 80px;text-align:center;}
 .pillars-header .sec-body{margin-top:16px;}
-.pillars-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(244,239,230,0.06);}
-.pillar{padding:48px 40px;background:#28221b;}
-.pillar-num{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:0.85rem;color:rgba(244,239,230,0.2);display:block;margin-bottom:32px;}
-.pillar-title{font-size:0.62rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,230,0.8);display:block;margin-bottom:14px;}
-.pillar-body{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:0.95rem;line-height:1.75;color:rgba(244,239,230,0.38);}
+.waypoints{max-width:900px;margin:0 auto;position:relative;display:flex;flex-direction:column;gap:0;}
+.waypoints::before{content:'';position:absolute;left:24px;top:24px;bottom:24px;width:0;border-left:2px dashed rgba(244,239,230,0.12);}
+.waypoint{display:flex;gap:40px;align-items:flex-start;position:relative;padding:40px 0;}
+.waypoint-icon{flex-shrink:0;width:48px;height:48px;position:relative;z-index:1;display:flex;align-items:center;justify-content:center;}
+.waypoint-icon img{width:32px;height:32px;object-fit:contain;}
+.waypoint-icon::before{content:'';position:absolute;inset:0;background:rgba(201,169,110,0.1);border:1px solid rgba(201,169,110,0.25);border-radius:50%;}
+.waypoint-content{padding-top:4px;}
+.waypoint-num{font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.6rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#c9a96e;display:block;margin-bottom:8px;}
+.waypoint-title{font-family:'SF Pro Display',system-ui,sans-serif;font-size:1.1rem;font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;color:#f4efe6;display:block;margin-bottom:12px;}
+.waypoint-body{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:0.95rem;line-height:1.75;color:rgba(244,239,230,0.5);max-width:480px;}
 
 /* ─── FOUNDER ─── */
 .founder{border-bottom:none;padding:80px 40px;}
@@ -224,7 +229,10 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
   .hero-cta{padding:14px 32px !important;font-size:0.88rem !important;}
   .hero-scroll{bottom:12px;}
   .hero-scroll-line{height:24px;}
-  .what-grid,.pillars-header{grid-template-columns:1fr;gap:48px;}  .pillars-grid{grid-template-columns:1fr;}
+  .what-grid{grid-template-columns:1fr;gap:48px;}
+  .pillars-header{text-align:left;}
+  .waypoint{gap:24px;padding:32px 0;}
+  .waypoints::before{left:23px;}
   .founder{padding:40px 24px;}
   .founder-card{grid-template-columns:1fr;padding:40px 28px;border-radius:16px;}
   .founder-photo{order:-1;text-align:center;}
@@ -321,24 +329,34 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
 <!-- PILLARS -->
 <section class="sec pillars">
   <div class="pillars-header">
+    <span class="sec-label">Your journey</span>
     <h2 class="sec-h2">What you get<br><em>inside.</em></h2>
     <p class="sec-body">Three things that make Northstar worth being part of — and worth fighting to get into.</p>
   </div>
-  <div class="pillars-grid">
-    <div class="pillar">
-      <span class="pillar-num">01</span>
-      <span class="pillar-title">Share your work</span>
-      <p class="pillar-body">A dedicated space to put your projects in front of people who actually understand what they're looking at. Real feedback from working filmmakers.</p>
+  <div class="waypoints">
+    <div class="waypoint">
+      <div class="waypoint-icon"><img src="images/Spinning-Compass.png" alt=""></div>
+      <div class="waypoint-content">
+        <span class="waypoint-num">01 — First stop</span>
+        <span class="waypoint-title">Share your work</span>
+        <p class="waypoint-body">A dedicated space to put your projects in front of people who actually understand what they're looking at. Real feedback from working filmmakers.</p>
+      </div>
     </div>
-    <div class="pillar">
-      <span class="pillar-num">02</span>
-      <span class="pillar-title">Find work</span>
-      <p class="pillar-body">A job board where members post real gigs and collaborations. Work that comes through trust, not cold emails to strangers.</p>
+    <div class="waypoint">
+      <div class="waypoint-icon"><img src="images/Spinning-Compass.png" alt=""></div>
+      <div class="waypoint-content">
+        <span class="waypoint-num">02 — Next</span>
+        <span class="waypoint-title">Find work</span>
+        <p class="waypoint-body">A job board where members post real gigs and collaborations. Work that comes through trust, not cold emails to strangers.</p>
+      </div>
     </div>
-    <div class="pillar">
-      <span class="pillar-num">03</span>
-      <span class="pillar-title">Build together</span>
-      <p class="pillar-body">The kind of room you wish had existed when you started. Honest conversations about craft, career, and everything in between.</p>
+    <div class="waypoint">
+      <div class="waypoint-icon"><img src="images/Spinning-Compass.png" alt=""></div>
+      <div class="waypoint-content">
+        <span class="waypoint-num">03 — Destination</span>
+        <span class="waypoint-title">Build together</span>
+        <p class="waypoint-body">The kind of room you wish had existed when you started. Honest conversations about craft, career, and everything in between.</p>
+      </div>
     </div>
   </div>
 </section>
