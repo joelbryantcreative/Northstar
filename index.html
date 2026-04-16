@@ -164,6 +164,16 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
 .footer-link:hover{color:rgba(244,239,230,0.6);}
 .footer-legal{font-size:0.55rem;color:rgba(244,239,230,0.15);letter-spacing:0.06em;width:100%;}
 
+/* ─── MENU OVERLAY ─── */
+.menu-overlay{position:fixed;inset:0;z-index:300;background:#28221b;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;opacity:0;pointer-events:none;transition:opacity 0.35s;}
+.menu-overlay.open{opacity:1;pointer-events:auto;}
+.menu-overlay a{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,3.5rem);color:#f4efe6;text-decoration:none;transition:opacity 0.2s;}
+.menu-overlay a:hover{opacity:0.5;}
+.menu-close{position:absolute;top:56px;right:40px;transform:translateY(-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;border:none;}
+.menu-close span{display:block;width:22px;height:1.5px;background:#f4efe6;opacity:0.65;position:absolute;}
+.menu-close span:first-child{transform:rotate(45deg);}
+.menu-close span:last-child{transform:rotate(-45deg);}
+
 /* ─── MOBILE ─── */
 @media(max-width:768px){
   
@@ -185,7 +195,7 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
 
 <!-- NAV -->
 <nav>
-  <div class="nav-hamburger">
+  <div class="nav-hamburger" onclick="toggleMenu()">
     <span></span>
     <span></span>
     <span></span>
@@ -193,6 +203,14 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
   <a href="#" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar"></a>
   <a href="#apply" class="nav-apply">Apply</a>
 </nav>
+
+<!-- MENU OVERLAY -->
+<div class="menu-overlay" id="menu">
+  <button class="menu-close" onclick="toggleMenu()"><span></span><span></span></button>
+  <a href="#" onclick="toggleMenu()">Home</a>
+  <a href="#apply" onclick="toggleMenu()">Apply</a>
+  <a href="mailto:joel@joelbryant.com.au" onclick="toggleMenu()">Contact</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -406,6 +424,7 @@ footer img{height:18px;opacity:0.25;filter:brightness(0) invert(1);}
 
 <script>
 window.addEventListener('scroll',function(){document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50);});
+function toggleMenu(){document.getElementById('menu').classList.toggle('open');}
 function pick(el,g){document.querySelectorAll('#'+g+' .radio-row').forEach(r=>r.classList.remove('sel'));el.classList.add('sel');}
 let ftv=null;
 function ft(v){ftv=v;document.getElementById('ft-y').classList.toggle('on',v==='yes');document.getElementById('ft-n').classList.toggle('on',v==='no');}
