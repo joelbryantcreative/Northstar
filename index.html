@@ -250,7 +250,7 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="images/Halftone-Background.webp" alt="">
+    <img src="images/Home-Cover-TextureBW.webp" alt="">
   </div>
 
   <div class="hero-content">
@@ -476,7 +476,7 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
   }
   requestAnimationFrame(tick);
 })();
-window.addEventListener('scroll',function(){document.querySelector('nav').classList.toggle('scrolled',window.scrollY>50);});
+window.addEventListener('scroll',function(){var badge=document.querySelector('.hero-badge');var trigger=badge?badge.getBoundingClientRect().top<112:window.scrollY>50;document.querySelector('nav').classList.toggle('scrolled',trigger);});
 function toggleMenu(){document.getElementById('menu').classList.toggle('open');}
 function pick(el,g){document.querySelectorAll('#'+g+' .radio-row').forEach(r=>r.classList.remove('sel'));el.classList.add('sel');}
 let ftv=null;
