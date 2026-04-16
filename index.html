@@ -17,25 +17,27 @@ body{background:#28221b;color:#f4efe6;font-family:'SF Pro Display',system-ui,san
 /* Heavy grain overlay */
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.04;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='250' height='250'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='250' height='250' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay;}
 
+/* NAV */
+nav{position:sticky;top:0;z-index:100;padding:0 40px;height:56px;display:flex;justify-content:space-between;align-items:center;background:rgba(40,34,27,0.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid rgba(244,239,230,0.06);}
+.nav-apply{font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#e6c385;text-decoration:none;border-bottom:1px solid rgba(230,195,133,0.25);padding-bottom:2px;transition:color 0.2s;}
+.nav-apply:hover{color:#f4efe6;}
+
 /* HERO */
-.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:space-between;padding:32px 40px 40px;position:relative;overflow:hidden;}
+.hero{min-height:calc(100svh - 56px);display:flex;flex-direction:column;justify-content:flex-end;padding:0 40px 56px;position:relative;overflow:hidden;}
 .hero-bg{position:absolute;inset:0;z-index:0;}
-.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.28) saturate(0.6);}
-.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 30%,rgba(8,7,4,0.75) 100%);}
-.hero-bg::before{content:'';position:absolute;bottom:0;left:0;right:0;height:55%;background:linear-gradient(to top,#28221b 0%,transparent 100%);z-index:1;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;filter:brightness(0.3) saturate(0.65);}
+.hero-bg::after{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 60% 50%,transparent 20%,rgba(8,7,4,0.6) 100%);}
+.hero-bg::before{content:'';position:absolute;bottom:0;left:0;right:0;height:65%;background:linear-gradient(to top,#28221b 0%,transparent 100%);z-index:1;}
 
-.hero-top{position:relative;z-index:2;display:flex;justify-content:space-between;align-items:flex-start;}
-.wordmark{font-family:'Canela Text',Georgia,serif;font-weight:400;font-style:italic;font-size:1.1rem;color:rgba(240,235,224,0.85);text-decoration:none;}
-.hero-top-apply{font-size:0.63rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#e6c385;text-decoration:none;border-bottom:1px solid rgba(230,195,133,0.3);padding-bottom:2px;transition:color 0.2s,border-color 0.2s;}
-.hero-top-apply:hover{color:#f4efe6;border-color:rgba(244,239,230,0.4);}
+.hero-content{position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:flex-end;}
 
-.hero-center{position:relative;z-index:2;margin-bottom:56px;}
-.hero-h1{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2.4rem,5.5vw,6rem);line-height:1.05;color:#f4efe6;letter-spacing:-0.01em;max-width:880px;}
-.hero-h1 em{font-style:italic;color:rgba(244,239,230,0.38);}
+.hero-left{}
+.hero-h1{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2rem,3.6vw,3.8rem);line-height:1.12;color:#f4efe6;letter-spacing:-0.01em;margin-bottom:0;}
+.hero-h1 em{font-style:italic;color:rgba(244,239,230,0.4);}
 
-.hero-bottom{position:relative;z-index:2;display:grid;grid-template-columns:1fr auto;gap:80px;align-items:flex-end;}
-.hero-desc{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:clamp(0.88rem,1.15vw,1rem);color:rgba(244,239,230,0.42);line-height:1.8;max-width:540px;}
-.hero-cta-text{font-size:0.63rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#e6c385;text-decoration:none;border-bottom:1px solid rgba(230,195,133,0.3);padding-bottom:2px;white-space:nowrap;transition:color 0.2s,border-color 0.2s;align-self:flex-end;}
+.hero-right{display:flex;flex-direction:column;gap:24px;}
+.hero-desc{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:0.95rem;color:rgba(244,239,230,0.5);line-height:1.8;}
+.hero-cta-text{font-size:0.62rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:#e6c385;text-decoration:none;border-bottom:1px solid rgba(230,195,133,0.3);padding-bottom:2px;display:inline-block;transition:color 0.2s,border-color 0.2s;}
 .hero-cta-text:hover{color:#f4efe6;border-color:rgba(244,239,230,0.4);}
 
 /* RULE */
@@ -111,8 +113,9 @@ footer{padding:36px 40px;border-top:1px solid rgba(244,239,230,0.07);display:fle
 .footer-link:hover{color:#e6c385;}
 
 @media(max-width:768px){
-  .hero{padding:24px 24px 32px;}
-  .hero-bottom{grid-template-columns:1fr;gap:32px;}
+  nav{padding:0 24px;}
+  .hero{padding:0 24px 48px;}
+  .hero-content{grid-template-columns:1fr;gap:36px;}
   .rule{margin:0 24px;}
   .pillars{grid-template-columns:1fr;gap:1px;}
   .pillar{padding:40px 24px;}
@@ -126,20 +129,23 @@ footer{padding:36px 40px;border-top:1px solid rgba(244,239,230,0.07);display:fle
 </head>
 <body>
 
+<nav>
+  <a href="#"><img src="images/Main-Logo.png" alt="Northstar" style="height:20px;opacity:0.88;display:block;"></a>
+  <a href="#apply" class="nav-apply">Apply to join</a>
+</nav>
+
 <section class="hero">
   <div class="hero-bg">
     <img src="images/Home-Cover.webp" alt="">
   </div>
-  <div class="hero-top">
-    <a href="#"><img src="images/Main-Logo.png" alt="Northstar" style="height:22px;opacity:0.88;display:block;"></a>
-    <a href="#apply" class="hero-top-apply">Apply to join</a>
-  </div>
-  <div class="hero-center">
-    <h1 class="hero-h1">The community for filmmakers and creatives who are serious about their craft.<br><em>And what they build with it.</em></h1>
-  </div>
-  <div class="hero-bottom">
-    <p class="hero-desc">Most filmmakers and creatives are surrounded by people who don't quite get it. Friends who think it's a hobby. Clients who want it cheaper. Algorithms that reward what's safe.<br><br>Northstar Collective exists for the ones who refuse to shrink. Filmmakers and visual creatives who are building something real — sharing work, finding collaborators, landing better clients, and figuring out the business side without losing what made them pick up a camera in the first place.<br><br>This isn't for everyone. It's for the ones who are already moving.</p>
-    <a href="#apply" class="hero-cta-text">Apply to join →</a>
+  <div class="hero-content">
+    <div class="hero-left">
+      <h1 class="hero-h1">A community for filmmakers and creatives who are serious about their craft.<br><em>And what they build with it.</em></h1>
+    </div>
+    <div class="hero-right">
+      <p class="hero-desc">Most filmmakers and creatives are surrounded by people who don't quite get it. Friends who think it's a hobby. Clients who want it cheaper. Algorithms that reward what's safe.<br><br>Northstar Collective exists for the ones who refuse to shrink — filmmakers and visual creatives who are building something real. Sharing work, finding collaborators, landing better clients, and figuring out the business side without losing what made them pick up a camera in the first place.<br><br>This isn't for everyone. It's for the ones who are already moving.</p>
+      <a href="#apply" class="hero-cta-text">Apply to join →</a>
+    </div>
   </div>
 </section>
 
