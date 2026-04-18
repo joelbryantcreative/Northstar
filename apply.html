@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Apply — Northstar Collective</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/css/intlTelInput.css">
 <style>
 @font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
 @font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
@@ -39,6 +40,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;height:112px;background:#282
 .field-input::placeholder{color:rgba(244,239,230,0.18);}
 .field-input:focus{border-color:rgba(244,239,230,0.35);}
 textarea.field-input{resize:none;line-height:1.65;display:block;}
+
+.iti{width:100%;display:block;}
+.iti--inline-dropdown .iti__dropdown-content{background:#28221b;border:1px solid rgba(244,239,230,0.15);border-radius:4px;}
+.iti__country-list{color:#f4efe6;font-family:'SF Pro Display',system-ui,sans-serif;font-style:normal;font-size:0.95rem;max-height:240px;}
+.iti__country{padding:10px 14px;}
+.iti__country.iti__highlight{background:rgba(244,239,230,0.08);}
+.iti__dial-code{color:rgba(244,239,230,0.5);}
+.iti__search-input{background:transparent;border:none;border-bottom:1px solid rgba(244,239,230,0.1);color:#f4efe6;padding:12px 14px;font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.9rem;}
+.iti__search-input::placeholder{color:rgba(244,239,230,0.3);}
+.iti__selected-country{background:transparent;padding-right:8px;}
+.iti__selected-country:hover,.iti__selected-country-primary:hover{background:transparent;}
+.iti__selected-dial-code{color:#f4efe6;font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1.15rem;padding-left:6px;}
+.iti__arrow{border-top-color:rgba(244,239,230,0.4);}
+.iti__arrow--up{border-bottom-color:rgba(244,239,230,0.4);}
 
 .radio-set{border-top:1px solid rgba(244,239,230,0.07);}
 .radio-row{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid rgba(244,239,230,0.07);cursor:pointer;}
@@ -134,6 +149,11 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
       </div>
 
       <div class="field">
+        <label class="field-label" for="f-phone">Phone number</label>
+        <input class="field-input" id="f-phone" type="tel" placeholder="Your phone number" autocomplete="tel">
+      </div>
+
+      <div class="field">
         <label class="field-label" for="f-handle">Instagram or main social</label>
         <input class="field-input" id="f-handle" type="text" placeholder="@yourhandle">
       </div>
@@ -202,6 +222,7 @@ function pick(el,g){document.querySelectorAll('#'+g+' .radio-row').forEach(r=>r.
 let ftv=null;
 function ft(v){ftv=v;document.getElementById('ft-y').classList.toggle('on',v==='yes');document.getElementById('ft-n').classList.toggle('on',v==='no');}
 const SHEET_URL='https://script.google.com/macros/s/AKfycbxaI5p4_ufvAbBuJ8hb5rlKgy6o0xcK7VbCJNSAnsT-ZHc2tvUlIJTvRHM_nQgeOQyJ/exec';
+let iti=null;
 async function send(){
   const name=document.getElementById('f-name').value.trim();
   const email=document.getElementById('f-email').value.trim();
@@ -212,6 +233,7 @@ async function send(){
   const fd=new FormData();
   fd.append('name',name);
   fd.append('email',email);
+  fd.append('phone',iti?iti.getNumber():document.getElementById('f-phone').value.trim());
   fd.append('instagram',document.getElementById('f-handle').value.trim());
   const selStage=document.querySelector('#sg .radio-row.sel .radio-text');
   fd.append('stage',selStage?selStage.textContent:'');
@@ -227,6 +249,15 @@ async function send(){
     alert('Something went wrong. Please try again or email joel@joelbryant.com.au directly.');
   }
 }
+</script>
+<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/intlTelInput.min.js"></script>
+<script>
+iti=window.intlTelInput(document.getElementById('f-phone'),{
+  initialCountry:'au',
+  separateDialCode:true,
+  preferredCountries:['au','us','gb','nz','ca'],
+  loadUtils:()=>import('https://cdn.jsdelivr.net/npm/intl-tel-input@23.0.12/build/js/utils.js')
+});
 </script>
 </body>
 </html>
