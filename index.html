@@ -92,13 +92,16 @@ nav.scrolled{background:#28221b;box-shadow:0 1px 0 rgba(244,239,230,0.07);}
 .sec-link:hover{border-color:rgba(244,239,230,0.7);}
 
 /* ─── WHAT ─── */
-.what{background:#28221b;border-bottom:1px solid rgba(244,239,230,0.07);text-align:center;}
-.what-inner{max-width:900px;margin:0 auto;}
-.what-heading{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2.2rem,4.5vw,4.2rem);line-height:1.1;color:#f4efe6;margin:24px auto 40px;letter-spacing:-0.01em;}
+.what{background:#28221b;border-bottom:1px solid rgba(244,239,230,0.07);}
+.what-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;}
+.what-img{border-radius:8px;overflow:hidden;}
+.what-img img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) brightness(0.85);}
+.what-text{text-align:left;}
+.what-heading{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2.2rem,4.5vw,4.2rem);line-height:1.1;color:#f4efe6;margin:0 0 40px;letter-spacing:-0.01em;}
 .what-heading em{font-style:italic;color:rgba(244,239,230,0.4);}
 .what-heading .circled{position:relative;display:inline-block;color:#c9a96e;padding:0 0.08em;}
 .what-heading .circled::before{content:'';position:absolute;top:-12%;left:-2%;right:-2%;bottom:-8%;border:2px solid #c9a96e;border-radius:50%;transform:rotate(-3deg);pointer-events:none;opacity:0.85;}
-.what-body{max-width:640px;margin:0 auto;}
+.what-body{max-width:560px;}
 .what-body p{font-size:0.95rem;line-height:1.85;color:#f4efe6;margin-bottom:18px;}
 .what-body p:last-child{margin-bottom:0;}
 .what .sec-link{margin-top:40px;color:#f4efe6;border-bottom-color:rgba(244,239,230,0.3);}
@@ -234,7 +237,8 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
   .hero-cta{padding:14px 32px !important;font-size:0.88rem !important;}
   .hero-scroll{bottom:12px;}
   .hero-scroll-line{height:24px;}
-  .what-heading{margin-bottom:32px;}
+  .what-inner{grid-template-columns:1fr;gap:40px;}
+  .what-heading{margin-bottom:24px;}
   .pillars-header{text-align:left;}
   .pillars-cards{grid-template-columns:1fr;gap:20px;}
   .pillar-card{aspect-ratio:4/3;}
@@ -329,13 +333,18 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
 <!-- WHAT IS THIS -->
 <section class="sec what">
   <div class="what-inner">
-    <h2 class="what-heading">A creative <span class="circled">ecosystem.</span><br><em>Not just a community.</em></h2>
+    <div class="what-img">
+      <img src="Community.jpg" alt="Northstar community">
+    </div>
+    <div class="what-text">
+      <h2 class="what-heading">A creative <span class="circled">ecosystem.</span><br><em>Not just a community.</em></h2>
     <div class="what-body">
       <p>Most filmmakers and creatives are surrounded by people who don't quite get it. Friends and family who think it's a hobby. Clients who want more of your time for a cheaper price.</p>
       <p>Northstar Collective exists for the ones who refuse to shrink. Filmmakers and creative entrepreneurs who are building something real. Sharing work, finding collaborators, landing better clients, and figuring out the business side without losing what made them pick up a camera in the first place.</p>
       <p>This is not for everyone. It's for the ones who know deep within them that they have a calling for a life of creative freedom, and want to carve a path towards turning their passion into a career.</p>
     </div>
     <a href="apply.html" class="sec-link">Apply to join</a>
+    </div>
   </div>
 </section>
 
