@@ -191,6 +191,20 @@ textarea.field-input{resize:none;min-height:80px;line-height:1.65;display:block;
 .success-msg p{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1rem;color:rgba(244,239,230,0.4);line-height:1.75;}
 .success-msg a{color:#f4efe6;text-decoration:none;border-bottom:1px solid rgba(244,239,230,0.3);}
 
+/* ─── FAQ ─── */
+.faq{background:#28221b;border-bottom:1px solid rgba(244,239,230,0.07);}
+.faq-header{max-width:900px;margin:0 auto 56px;text-align:center;}
+.faq-header .sec-label{color:#c9a96e;margin-bottom:16px;}
+.faq-header .sec-h2 em{color:#c9a96e;}
+.faq-list{max-width:820px;margin:0 auto;display:flex;flex-direction:column;gap:14px;}
+.faq-item{background:rgba(244,239,230,0.04);border:1px solid rgba(244,239,230,0.08);border-radius:14px;overflow:hidden;transition:background 0.2s,border-color 0.2s;}
+.faq-item[open]{background:rgba(244,239,230,0.06);border-color:rgba(201,169,110,0.25);}
+.faq-item summary{padding:22px 28px;cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;gap:20px;font-family:'SF Pro Display',system-ui,sans-serif;font-size:1rem;font-weight:500;color:#f4efe6;}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:'';width:10px;height:10px;border-right:1.5px solid rgba(244,239,230,0.6);border-bottom:1.5px solid rgba(244,239,230,0.6);transform:rotate(45deg);transition:transform 0.25s;flex-shrink:0;margin-top:-4px;}
+.faq-item[open] summary::after{transform:rotate(-135deg);margin-top:4px;border-color:#c9a96e;}
+.faq-answer{padding:0 28px 24px;font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:0.95rem;line-height:1.75;color:rgba(244,239,230,0.7);}
+
 /* ─── FINAL CTA ─── */
 .final-cta{text-align:center;border-bottom:1px solid rgba(244,239,230,0.07);}
 .final-cta-inner{max-width:1100px;margin:0 auto;}
@@ -252,6 +266,8 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
   .founder-card{grid-template-columns:1fr;padding:40px 28px;border-radius:16px;}
   .founder-photo{order:-1;text-align:center;}
   .final-cta h2{white-space:normal;font-size:2.2rem !important;}
+  .faq-item summary{padding:18px 22px;font-size:0.95rem;}
+  .faq-answer{padding:0 22px 20px;font-size:0.92rem;}
   .pillar{padding:40px 24px;}
   .full-img-text{left:24px;right:24px;bottom:40px;}
   .apply-inner{padding:0;}
@@ -399,6 +415,44 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
       <img src="images/joel-dp.webp" alt="Joel Bryant">
       <p class="founder-photo-tag">Joel Bryant<br>Founder, Northstar</p>
     </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec faq">
+  <div class="faq-header">
+    <span class="sec-label">FAQs</span>
+    <h2 class="sec-h2">Questions? <em>We've got answers.</em></h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item">
+      <summary>What exactly is the Northstar Collective?</summary>
+      <div class="faq-answer">A private community for filmmakers and creative entrepreneurs who are serious about their craft. A space to share work, find real opportunities, and grow alongside people who actually get it.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Why is it application-only?</summary>
+      <div class="faq-answer">The quality of a community is the quality of the people in it. Every application is reviewed personally to keep Northstar a room worth being in.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What's included in membership?</summary>
+      <div class="faq-answer">Access to the private community, a space to share your work and get real feedback from working filmmakers, a job board for real gigs and collaborations, and ongoing conversations about craft, career, and building a creative life.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What about The Modern Filmmaker System and Cohort programs?</summary>
+      <div class="faq-answer">These are optional deeper pathways available to members at separate tiers. They're not included in the base membership but can be added when you're ready to go deeper with direct mentorship and structured learning.</div>
+    </details>
+    <details class="faq-item">
+      <summary>How soon will I hear back after applying?</summary>
+      <div class="faq-answer">Every application is reviewed personally — usually within a few days. If you're a fit, we'll be in touch to welcome you in.</div>
+    </details>
+    <details class="faq-item">
+      <summary>Do I need to be a full-time filmmaker to join?</summary>
+      <div class="faq-answer">No. Northstar is for creators at every stage — from those turning a passion into a career, to working professionals looking to level up. What matters is that you're serious about your craft.</div>
+    </details>
+    <details class="faq-item">
+      <summary>What if I'm not a fit right now?</summary>
+      <div class="faq-answer">If the timing isn't right, we'll let you know. Creative paths aren't linear, and the door stays open — you can always re-apply when you're ready.</div>
+    </details>
   </div>
 </section>
 
