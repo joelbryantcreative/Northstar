@@ -229,18 +229,30 @@ let iti=null;
 async function send(){
   const name=document.getElementById('f-name').value.trim();
   const email=document.getElementById('f-email').value.trim();
-  if(!name||!email){alert('Please add your name and email.');return;}
+  const phone=iti?iti.getNumber():document.getElementById('f-phone').value.trim();
+  const instagram=document.getElementById('f-handle').value.trim();
+  const selStage=document.querySelector('#sg .radio-row.sel .radio-text');
+  const stage=selStage?selStage.textContent:'';
+  const story=document.getElementById('f-story').value.trim();
+  const missing=[];
+  if(!name) missing.push('Full name');
+  if(!email) missing.push('Email address');
+  if(!phone) missing.push('Phone number');
+  if(!instagram) missing.push('Instagram or main social');
+  if(!stage) missing.push('Where are you at');
+  if(!story) missing.push('What are you working on');
+  if(ftv===null) missing.push('Mentorship question');
+  if(missing.length){alert('Please complete all fields:\n\n• '+missing.join('\n• '));return;}
   const btn=document.querySelector('.submit-btn');
   const orig=btn.textContent;
   btn.disabled=true;btn.textContent='Sending...';
   const fd=new FormData();
   fd.append('name',name);
   fd.append('email',email);
-  fd.append('phone',iti?iti.getNumber():document.getElementById('f-phone').value.trim());
-  fd.append('instagram',document.getElementById('f-handle').value.trim());
-  const selStage=document.querySelector('#sg .radio-row.sel .radio-text');
-  fd.append('stage',selStage?selStage.textContent:'');
-  fd.append('story',document.getElementById('f-story').value.trim());
+  fd.append('phone',phone);
+  fd.append('instagram',instagram);
+  fd.append('stage',stage);
+  fd.append('story',story);
   fd.append('mentorship',ftv||'');
   try{
     await fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:fd});
