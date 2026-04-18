@@ -77,7 +77,7 @@ nav.scrolled{background:#28221b;box-shadow:0 1px 0 rgba(244,239,230,0.07);}
 
 /* ─── MARQUEE ─── */
 .marquee-wrap{overflow:hidden;border-top:1px solid rgba(244,239,230,0.07);border-bottom:1px solid rgba(244,239,230,0.07);padding:18px 0;}
-.marquee-track{display:flex;white-space:nowrap;animation:marquee 22s linear infinite;}
+.marquee-track{display:flex;white-space:nowrap;animation:marquee 40s linear infinite;width:max-content;}
 .marquee-item{font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;color:#f4efe6;padding:0 32px;display:flex;align-items:center;gap:32px;}
 .marquee-item::after{content:'';display:inline-block;width:14px;height:14px;background:url('images/Spinning-Compass.png') center/contain no-repeat;opacity:1;}
 @keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
@@ -307,6 +307,14 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
+    <span class="marquee-item">Land better clients</span>
+    <span class="marquee-item">Share your work</span>
+    <span class="marquee-item">Find your people</span>
+    <span class="marquee-item">Build together</span>
+    <span class="marquee-item">Land better clients</span>
+    <span class="marquee-item">Share your work</span>
+    <span class="marquee-item">Find your people</span>
+    <span class="marquee-item">Build together</span>
     <span class="marquee-item">Land better clients</span>
     <span class="marquee-item">Share your work</span>
     <span class="marquee-item">Find your people</span>
