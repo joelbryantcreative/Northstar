@@ -82,7 +82,7 @@ nav.scrolled{background:#28221b;box-shadow:0 1px 0 rgba(244,239,230,0.07);}
 .marquee-track{display:flex;white-space:nowrap;animation:marquee 40s linear infinite;width:max-content;}
 .marquee-item{font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.75rem;font-weight:700;letter-spacing:-0.01em;text-transform:uppercase;color:#f4efe6;padding:0 32px;display:flex;align-items:center;gap:32px;}
 .marquee-item::after{content:'';display:inline-block;width:14px;height:14px;background:url('images/Spinning-Compass.png') center/contain no-repeat;opacity:1;}
-@keyframes marquee{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+@keyframes marquee{from{transform:translateX(-50%);}to{transform:translateX(0);}}
 
 /* ─── SECTION BASE ─── */
 .sec{padding:120px 40px;}
@@ -237,6 +237,7 @@ footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
   .loader-bar-wrap{width:480px;}
   .loader-compass{width:72px;height:72px;}
   .loader-pct{font-size:7rem;}
+  .marquee-track{animation-duration:70s;}
 }
 
 /* ─── MOBILE ─── */
