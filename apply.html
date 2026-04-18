@@ -201,11 +201,31 @@ function toggleMenu(){document.getElementById('menu').classList.toggle('open');}
 function pick(el,g){document.querySelectorAll('#'+g+' .radio-row').forEach(r=>r.classList.remove('sel'));el.classList.add('sel');}
 let ftv=null;
 function ft(v){ftv=v;document.getElementById('ft-y').classList.toggle('on',v==='yes');document.getElementById('ft-n').classList.toggle('on',v==='no');}
-function send(){
-  if(!document.getElementById('f-name').value.trim()||!document.getElementById('f-email').value.trim()){alert('Please add your name and email.');return;}
-  document.getElementById('form-wrap').style.display='none';
-  const s=document.getElementById('success');s.classList.add('show');
-  window.scrollTo({top:0,behavior:'smooth'});
+const SHEET_URL='https://script.google.com/macros/s/AKfycbxaI5p4_ufvAbBuJ8hb5rlKgy6o0xcK7VbCJNSAnsT-ZHc2tvUlIJTvRHM_nQgeOQyJ/exec';
+async function send(){
+  const name=document.getElementById('f-name').value.trim();
+  const email=document.getElementById('f-email').value.trim();
+  if(!name||!email){alert('Please add your name and email.');return;}
+  const btn=document.querySelector('.submit-btn');
+  const orig=btn.textContent;
+  btn.disabled=true;btn.textContent='Sending...';
+  const fd=new FormData();
+  fd.append('name',name);
+  fd.append('email',email);
+  fd.append('instagram',document.getElementById('f-handle').value.trim());
+  const selStage=document.querySelector('#sg .radio-row.sel .radio-text');
+  fd.append('stage',selStage?selStage.textContent:'');
+  fd.append('story',document.getElementById('f-story').value.trim());
+  fd.append('mentorship',ftv||'');
+  try{
+    await fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:fd});
+    document.getElementById('form-wrap').style.display='none';
+    document.getElementById('success').classList.add('show');
+    window.scrollTo({top:0,behavior:'smooth'});
+  }catch(err){
+    btn.disabled=false;btn.textContent=orig;
+    alert('Something went wrong. Please try again or email joel@joelbryant.com.au directly.');
+  }
 }
 </script>
 </body>
