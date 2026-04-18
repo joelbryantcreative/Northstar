@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apply — Northstar Collective</title>
+<style>
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:#28221b;color:#f4efe6;font-family:'SF Pro Display',system-ui,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:0.1;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");mix-blend-mode:overlay;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;height:112px;background:#28221b;box-shadow:0 1px 0 rgba(244,239,230,0.07);}
+.nav-hamburger{position:absolute;top:56px;left:24px;transform:translateY(-50%);width:44px;height:44px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;cursor:pointer;}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:#f4efe6;opacity:1;}
+.nav-logo{position:absolute;top:56px;left:50%;transform:translate(-50%,-50%);}
+.nav-logo img{height:32px;display:block;filter:brightness(0) invert(1);opacity:1;}
+.nav-home{position:absolute;top:56px;right:56px;transform:translateY(-50%);height:auto;padding:10px 28px;display:flex;align-items:center;background:transparent;border:1px solid #f4efe6;border-radius:999px;font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.88rem;font-weight:500;letter-spacing:0;text-transform:uppercase;color:#f4efe6;text-decoration:none;transition:border-color 0.2s,background 0.2s;}
+.nav-home:hover{border-color:rgba(244,239,230,0.8);background:rgba(244,239,230,0.05);}
+
+.sec{padding:180px 40px 120px;}
+.sec-label{font-size:0.58rem;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:rgba(244,239,230,0.35);margin-bottom:20px;display:block;}
+.sec-h2{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2rem,3.8vw,4rem);line-height:1.08;color:#f4efe6;}
+.sec-h2 em{font-style:italic;color:rgba(244,239,230,0.4);}
+.sec-body{font-size:0.92rem;line-height:1.9;color:rgba(244,239,230,0.55);}
+
+.apply-inner{max-width:720px;margin:0 auto;}
+.apply-inner .sec-body{margin-top:16px;margin-bottom:64px;}
+
+.field{margin-bottom:40px;}
+.field-label{font-size:0.57rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,230,0.28);display:block;margin-bottom:16px;}
+.field-input{width:100%;background:transparent;border:none;border-bottom:1px solid rgba(244,239,230,0.1);padding:0 0 16px;font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1.15rem;color:#f4efe6;outline:none;transition:border-color 0.2s;border-radius:0;-webkit-appearance:none;}
+.field-input::placeholder{color:rgba(244,239,230,0.18);}
+.field-input:focus{border-color:rgba(244,239,230,0.35);}
+textarea.field-input{resize:none;min-height:80px;line-height:1.65;display:block;}
+
+.radio-set{border-top:1px solid rgba(244,239,230,0.07);}
+.radio-row{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid rgba(244,239,230,0.07);cursor:pointer;}
+.radio-row input{display:none;}
+.radio-circle{width:10px;height:10px;border-radius:50%;border:1px solid rgba(244,239,230,0.2);flex-shrink:0;transition:all 0.15s;}
+.radio-row.sel .radio-circle{background:#f4efe6;border-color:#f4efe6;}
+.radio-text{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1rem;color:rgba(244,239,230,0.4);line-height:1.4;transition:color 0.15s;}
+.radio-row.sel .radio-text{color:rgba(244,239,230,0.88);}
+
+.form-divider{height:1px;background:rgba(244,239,230,0.07);margin:52px 0;}
+
+.ft-label{font-size:0.57rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(244,239,230,0.28);display:block;margin-bottom:16px;}
+.ft-question{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1.2rem;color:rgba(244,239,230,0.65);margin-bottom:24px;line-height:1.4;}
+.ft-options{display:flex;gap:1px;background:rgba(244,239,230,0.07);}
+.ft-opt{flex:1;padding:16px;background:#28221b;font-family:'SF Pro Display',system-ui,sans-serif;font-size:0.95rem;font-weight:500;letter-spacing:0;text-transform:uppercase;color:rgba(244,239,230,0.3);cursor:pointer;border:none;transition:color 0.15s,background 0.15s;}
+.ft-opt:hover{color:rgba(244,239,230,0.7);}
+.ft-opt.on{background:rgba(244,239,230,0.05);color:#f4efe6;}
+.ft-note{margin-top:12px;font-size:0.57rem;color:rgba(244,239,230,0.18);line-height:1.8;}
+
+.submit-area{margin-top:56px;display:flex;align-items:center;justify-content:space-between;}
+.submit-btn{font-family:'SF Pro Display',system-ui,sans-serif;font-size:1rem;font-weight:500;letter-spacing:0;text-transform:uppercase;background:#f4efe6;color:#28221b;border:none;padding:18px 48px;cursor:pointer;transition:opacity 0.2s;}
+.submit-btn:hover{opacity:0.85;}
+.submit-aside{font-size:0.55rem;letter-spacing:0.1em;text-transform:uppercase;color:rgba(244,239,230,0.2);line-height:1.9;text-align:right;}
+
+.success-msg{display:none;padding:80px 0;}
+.success-msg.show{display:block;}
+.success-msg h3{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2rem,4vw,3.5rem);color:#f4efe6;margin-bottom:20px;}
+.success-msg p{font-family:'Canela Text',Georgia,serif;font-style:italic;font-size:1rem;color:rgba(244,239,230,0.4);line-height:1.75;}
+.success-msg a{color:#f4efe6;text-decoration:none;border-bottom:1px solid rgba(244,239,230,0.3);}
+
+footer{padding:48px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;border-top:1px solid rgba(244,239,230,0.07);}
+footer img{height:18px;opacity:1;filter:brightness(0) invert(1);}
+.footer-right{display:flex;gap:28px;}
+.footer-link{font-size:0.57rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(244,239,230,0.2);text-decoration:none;transition:color 0.2s;}
+.footer-link:hover{color:rgba(244,239,230,0.6);}
+.footer-legal{font-size:0.55rem;color:rgba(244,239,230,0.15);letter-spacing:0.06em;width:100%;}
+
+.menu-overlay{position:fixed;inset:0;z-index:300;background:#28221b;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:40px;opacity:0;pointer-events:none;transition:opacity 0.35s;}
+.menu-overlay.open{opacity:1;pointer-events:auto;}
+.menu-overlay a{font-family:'Canela Text',Georgia,serif;font-weight:400;font-size:clamp(2rem,5vw,3.5rem);color:#f4efe6;text-decoration:none;transition:opacity 0.2s;}
+.menu-overlay a:hover{opacity:0.5;}
+.menu-close{position:absolute;top:56px;right:40px;transform:translateY(-50%);width:44px;height:44px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;border:none;}
+.menu-close span{display:block;width:22px;height:1.5px;background:#f4efe6;opacity:1;position:absolute;}
+.menu-close span:first-child{transform:rotate(45deg);}
+.menu-close span:last-child{transform:rotate(-45deg);}
+
+@media(max-width:768px){
+  .nav-home{right:24px;padding:8px 20px;font-size:0.78rem;}
+  .sec{padding:140px 24px 80px;}
+  .apply-inner{padding:0;}
+  .submit-area{flex-direction:column;align-items:flex-start;gap:24px;}
+  .submit-aside{text-align:left;}
+  footer{padding:32px 24px;flex-direction:column;align-items:flex-start;}
+  .ft-options{flex-direction:column;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <a href="index.html" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar"></a>
+  <a href="index.html" class="nav-home">Home</a>
+</nav>
+
+<div class="menu-overlay" id="menu">
+  <button class="menu-close" onclick="toggleMenu()"><span></span><span></span></button>
+  <a href="index.html">Home</a>
+  <a href="apply.html">Apply</a>
+  <a href="mailto:joel@joelbryant.com.au">Contact</a>
+</div>
+
+<section class="sec">
+  <div class="apply-inner">
+    <span class="sec-label">The Northstar Collective</span>
+    <h2 class="sec-h2">Apply to<br><em>join us.</em></h2>
+    <p class="sec-body">Every application is reviewed personally. Tell us about yourself and where you're at — we'll be in touch within a few days.</p>
+
+    <div id="form-wrap" style="margin-top:64px;">
+
+      <div class="field">
+        <label class="field-label" for="f-name">Full name</label>
+        <input class="field-input" id="f-name" type="text" placeholder="Your name" autocomplete="name">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="f-email">Email address</label>
+        <input class="field-input" id="f-email" type="email" placeholder="your@email.com" autocomplete="email">
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="f-handle">Instagram or main social</label>
+        <input class="field-input" id="f-handle" type="text" placeholder="@yourhandle">
+      </div>
+
+      <div class="field">
+        <label class="field-label">Where are you at?</label>
+        <div class="radio-set" id="sg">
+          <label class="radio-row" onclick="pick(this,'sg')">
+            <input type="radio" name="stage">
+            <div class="radio-circle"></div>
+            <span class="radio-text">I create for passion — working towards making it a career</span>
+          </label>
+          <label class="radio-row" onclick="pick(this,'sg')">
+            <input type="radio" name="stage">
+            <div class="radio-circle"></div>
+            <span class="radio-text">I'm transitioning — filmmaking is becoming my main focus</span>
+          </label>
+          <label class="radio-row" onclick="pick(this,'sg')">
+            <input type="radio" name="stage">
+            <div class="radio-circle"></div>
+            <span class="radio-text">I'm a working filmmaker — looking to connect and level up</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="f-story">What are you working on?</label>
+        <textarea class="field-input" id="f-story" rows="3" placeholder="A project, a career, a body of work — whatever it is."></textarea>
+      </div>
+
+      <div class="form-divider"></div>
+
+      <span class="ft-label">One more thing</span>
+      <p class="ft-question">Are you looking to fast-track your growth with direct mentorship?</p>
+      <div class="ft-options">
+        <button class="ft-opt" id="ft-y" onclick="ft('yes')">Yes — I want to move faster</button>
+        <button class="ft-opt" id="ft-n" onclick="ft('no')">Not right now</button>
+      </div>
+      <p class="ft-note">If yes, we may reach out about a free discovery call to explore working together directly.</p>
+
+      <div class="submit-area">
+        <button class="submit-btn" onclick="send()">Submit application</button>
+        <p class="submit-aside">By application only.<br>Reviewed personally.<br>No spam, ever.</p>
+      </div>
+
+    </div>
+
+    <div class="success-msg" id="success">
+      <h3>Application received.</h3>
+      <p>Every application is reviewed personally.<br>We'll be in touch within a few days.<br><br>In the meantime — <a href="https://instagram.com/joelbryant_" target="_blank">follow along on Instagram.</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="images/Main-Logo.png" alt="Northstar">
+  <div class="footer-right">
+    <a href="https://www.joelbryant.com.au" target="_blank" class="footer-link">joelbryant.com.au</a>
+    <a href="https://instagram.com/joelbryant_" target="_blank" class="footer-link">Instagram</a>
+    <a href="index.html" class="footer-link">Home</a>
+  </div>
+  <p class="footer-legal">© 2026 Northstar · Joel Bryant · All rights reserved.</p>
+</footer>
+
+<script>
+function toggleMenu(){document.getElementById('menu').classList.toggle('open');}
+function pick(el,g){document.querySelectorAll('#'+g+' .radio-row').forEach(r=>r.classList.remove('sel'));el.classList.add('sel');}
+let ftv=null;
+function ft(v){ftv=v;document.getElementById('ft-y').classList.toggle('on',v==='yes');document.getElementById('ft-n').classList.toggle('on',v==='no');}
+function send(){
+  if(!document.getElementById('f-name').value.trim()||!document.getElementById('f-email').value.trim()){alert('Please add your name and email.');return;}
+  document.getElementById('form-wrap').style.display='none';
+  const s=document.getElementById('success');s.classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+</body>
+</html>
