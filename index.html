@@ -225,9 +225,9 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   section{padding:80px 5vw;}
   .hero{padding:24px 5vw 60px;}
   .eyebrow{font-size:0.55rem;letter-spacing:0.12em;}
-  .opp-cards{height:220px;margin-top:48px;}
-  .opp-card{width:120px;}
-  .opp-card:nth-child(3){width:140px;}
+  .opp-cards{height:auto;margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 4px;}
+  .opp-card{width:100% !important;aspect-ratio:3/4;transform:none !important;border-radius:10px;}
+  .opp-card:nth-child(5){grid-column:1 / -1;max-width:50%;justify-self:center;}
   .final{padding:100px 5vw;}
   .cta-primary,.btn-dark{width:100%;justify-content:center;text-align:center;}
   footer{flex-direction:column;text-align:center;}
