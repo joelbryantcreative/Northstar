@@ -77,6 +77,17 @@ section{padding:120px 6vw;position:relative;}
 .opportunity-body em{font-style:italic;color:var(--gold);}
 .opportunity-divider{display:none;}
 .opportunity-pivot{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1rem,1.2vw,1.15rem);color:var(--cream3);max-width:640px;margin:48px auto 0;line-height:1.65;}
+.opp-cards{display:flex;justify-content:center;align-items:flex-end;gap:0;margin-top:64px;position:relative;height:340px;}
+.opp-card{width:200px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 12px 40px rgba(0,0,0,0.5);transition:transform 0.3s;flex-shrink:0;}
+.opp-card:hover{transform:translateY(-8px) !important;}
+.opp-card img{width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.85);}
+.opp-card-label{position:absolute;bottom:16px;left:16px;right:16px;font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--cream);z-index:1;}
+.opp-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,0.8) 0%,transparent 50%);}
+.opp-card:nth-child(1){transform:rotate(-8deg) translateY(20px);z-index:1;}
+.opp-card:nth-child(2){transform:rotate(-4deg) translateY(6px);z-index:2;}
+.opp-card:nth-child(3){transform:rotate(0deg) translateY(0);z-index:3;width:220px;}
+.opp-card:nth-child(4){transform:rotate(4deg) translateY(6px);z-index:2;}
+.opp-card:nth-child(5){transform:rotate(8deg) translateY(20px);z-index:1;}
 
 .system{background:var(--ink);border-bottom:1px solid var(--border);}
 .system-header{text-align:center;max-width:760px;margin:0 auto 64px;}
@@ -212,19 +223,24 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
 }
 @media(max-width:768px){
   section{padding:80px 5vw;}
-  .hero{padding:80px 5vw 80px;}
+  .hero{padding:24px 5vw 60px;}
+  .eyebrow{font-size:0.55rem;letter-spacing:0.12em;}
+  .opp-cards{height:220px;margin-top:48px;}
+  .opp-card{width:120px;}
+  .opp-card:nth-child(3){width:140px;}
   .final{padding:100px 5vw;}
   .cta-primary,.btn-dark{width:100%;justify-content:center;text-align:center;}
   footer{flex-direction:column;text-align:center;}
   .footer-links{justify-content:center;flex-wrap:wrap;}
 }
 </style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 </head>
 <body>
 
 <nav>
   <a href="#" class="nav-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
-  <a href="https://calendly.com/joelbryant/northstar-cohort-discovery-call" class="nav-cta">Apply Now</a>
+  <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="nav-cta">Apply Now</a>
 </nav>
 
 <section class="hero">
@@ -243,7 +259,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
         </div>
       </div>
 
-      <a href="https://calendly.com/joelbryant/northstar-cohort-discovery-call" class="cta-primary">
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="cta-primary">
         Apply Now <span class="arrow">→</span>
       </a>
     </div>
@@ -255,6 +271,14 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
     <h2 class="sec-headline">There's never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
     <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder, every artist, every small studio is paying real money for the kind of work you already know how to make — or could learn to make in a year if you committed to it. <em>Five years ago this economy didn't exist at this scale.</em></p>
     <div class="opportunity-divider"></div>
+    <div class="opp-cards">
+      <div class="opp-card"><img src="images/Craved1-thumbnail.jpg" alt="Brands"><span class="opp-card-label">Brands</span></div>
+      <div class="opp-card"><img src="images/Flowing-wood-thumbnail.jpg" alt="Documentaries"><span class="opp-card-label">Documentaries</span></div>
+      <div class="opp-card"><img src="images/Boat.jpg" alt="Travel"><span class="opp-card-label">Travel</span></div>
+      <div class="opp-card"><img src="images/Growth.jpg" alt="Founders"><span class="opp-card-label">Founders</span></div>
+      <div class="opp-card"><img src="images/Community.jpg" alt="Events"><span class="opp-card-label">Events</span></div>
+    </div>
+
     <p class="opportunity-pivot">Most people who chase this opportunity chase it badly. They become invisible service providers — film monkeys for brands they don't care about. Or they become marketing-bros pretending to be filmmakers. NorthStar is for the ones who want to chase it properly.</p>
   </div>
 </section>
@@ -480,7 +504,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
     <span class="eyebrow">The Next Cohort</span>
     <h2 class="intake-title">Ten seats. <em>One conversation away.</em></h2>
     <p class="intake-stats">12 weeks · 10 seats · Application only</p>
-    <a href="https://calendly.com/joelbryant/northstar-cohort-discovery-call" class="btn-dark">Apply Now <span class="arrow">→</span></a>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="btn-dark">Apply Now <span class="arrow">→</span></a>
   </div>
 </section>
 
@@ -523,7 +547,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   <div class="final-inner">
     <h2 class="final-title">You've got the craft.<br>Now build the <em>business.</em></h2>
     <p class="final-sub">If the work in your head is bigger than the work you're being paid to make right now, the strategy call is where we figure out how to close that gap.</p>
-    <a href="https://calendly.com/joelbryant/northstar-cohort-discovery-call" class="cta-primary">Apply Now <span class="arrow">→</span></a>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="cta-primary">Apply Now <span class="arrow">→</span></a>
     <span class="cta-meta">45 minutes. No pitch deck. No pressure.</span>
   </div>
 </section>
@@ -548,5 +572,6 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   });
 </script>
 
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body>
 </html>
