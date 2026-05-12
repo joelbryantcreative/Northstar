@@ -99,8 +99,11 @@ section{padding:120px 6vw;position:relative;}
 .journey-header{margin-bottom:64px;}
 .journey-track{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;position:relative;}
 .journey-track::before{display:none;}
-.phase{position:relative;padding:36px 32px;background:var(--ink-card);border:1px solid var(--border);border-radius:8px;}
-.phase-dot{position:absolute;top:-7px;left:32px;width:14px;height:14px;background:var(--gold);border-radius:50%;border:4px solid var(--ink-soft);}
+.phase{position:relative;padding:0;background:var(--ink-card);border:1px solid var(--border);border-radius:8px;overflow:hidden;}
+.phase-img{width:100%;aspect-ratio:16/10;overflow:hidden;}
+.phase-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85) saturate(0.9);}
+.phase-body{padding:32px 32px 36px;}
+.phase-dot{position:absolute;top:16px;left:16px;width:36px;height:36px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-size:0.8rem;font-weight:600;color:var(--ink);z-index:1;}
 .phase-num{font-family:var(--sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;margin-top:8px;}
 .phase-name{font-family:var(--serif);font-weight:400;font-size:2.4rem;letter-spacing:-0.025em;margin-bottom:8px;color:var(--cream);}
 .phase-tagline{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--gold);font-size:1.1rem;margin-bottom:18px;}
@@ -217,6 +220,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   section{padding:80px 5vw;}
   .hero{padding:120px 5vw 80px;}
   .final{padding:100px 5vw;}
+  .cta-primary,.btn-dark,.nav-cta{width:100%;justify-content:center;text-align:center;}
   footer{flex-direction:column;text-align:center;}
   .footer-links{justify-content:center;flex-wrap:wrap;}
 }
@@ -311,43 +315,52 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
     </div>
     <div class="journey-track">
       <div class="phase">
-        <div class="phase-dot"></div>
-        <div class="phase-num">Phase 01 &#xB7; Weeks 1&#x2013;4</div>
-        <div class="phase-name">Become</div>
-        <div class="phase-tagline">Creating you.</div>
-        <p class="phase-desc">Identity, niche, point of view &#x2014; and the brief for your signature piece.</p>
-        <ul class="phase-weeks">
-          <li><span class="w">W1</span> Obsession &amp; Identity</li>
-          <li><span class="w">W2</span> Niche &amp; Point of View</li>
-          <li><span class="w">W3</span> The Signal</li>
-          <li><span class="w">W4</span> The Brief</li>
-        </ul>
+        <div class="phase-dot">1</div>
+        <div class="phase-img"><img src="images/Sand.jpg" alt="Become"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 01 &#xB7; Weeks 1&#x2013;4</div>
+          <div class="phase-name">Become</div>
+          <div class="phase-tagline">Creating you.</div>
+          <p class="phase-desc">Identity, niche, point of view &#x2014; and the brief for your signature piece.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W1</span> Obsession &amp; Identity</li>
+            <li><span class="w">W2</span> Niche &amp; Point of View</li>
+            <li><span class="w">W3</span> The Signal</li>
+            <li><span class="w">W4</span> The Brief</li>
+          </ul>
+        </div>
       </div>
       <div class="phase">
-        <div class="phase-dot"></div>
-        <div class="phase-num">Phase 02 &#xB7; Weeks 5&#x2013;8</div>
-        <div class="phase-name">Build</div>
-        <div class="phase-tagline">Showing the world.</div>
-        <p class="phase-desc">The signature piece gets made, released, and the content drumbeat begins.</p>
-        <ul class="phase-weeks">
-          <li><span class="w">W5</span> The Make</li>
-          <li><span class="w">W6</span> The Edit</li>
-          <li><span class="w">W7</span> The Reveal</li>
-          <li><span class="w">W8</span> The Drumbeat</li>
-        </ul>
+        <div class="phase-dot">2</div>
+        <div class="phase-img"><img src="images/Boat.jpg" alt="Build"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 02 &#xB7; Weeks 5&#x2013;8</div>
+          <div class="phase-name">Build</div>
+          <div class="phase-tagline">Showing the world.</div>
+          <p class="phase-desc">The signature piece gets made, released, and the content drumbeat begins.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W5</span> The Make</li>
+            <li><span class="w">W6</span> The Edit</li>
+            <li><span class="w">W7</span> The Reveal</li>
+            <li><span class="w">W8</span> The Drumbeat</li>
+          </ul>
+        </div>
       </div>
       <div class="phase">
-        <div class="phase-dot"></div>
-        <div class="phase-num">Phase 03 &#xB7; Weeks 9&#x2013;12</div>
-        <div class="phase-name">Earn</div>
-        <div class="phase-tagline">Getting paid and building forward.</div>
-        <p class="phase-desc">Offer, pricing, sales, delivery, and the loop.</p>
-        <ul class="phase-weeks">
-          <li><span class="w">W9</span> Offers &amp; Pricing</li>
-          <li><span class="w">W10</span> The Conversation</li>
-          <li><span class="w">W11</span> Delivery &amp; The Loop</li>
-          <li><span class="w">W12</span> The Sovereign Plan</li>
-        </ul>
+        <div class="phase-dot">3</div>
+        <div class="phase-img"><img src="images/Growth.jpg" alt="Earn"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 03 &#xB7; Weeks 9&#x2013;12</div>
+          <div class="phase-name">Earn</div>
+          <div class="phase-tagline">Getting paid and building forward.</div>
+          <p class="phase-desc">Offer, pricing, sales, delivery, and the loop.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W9</span> Offers &amp; Pricing</li>
+            <li><span class="w">W10</span> The Conversation</li>
+            <li><span class="w">W11</span> Delivery &amp; The Loop</li>
+            <li><span class="w">W12</span> The Sovereign Plan</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
