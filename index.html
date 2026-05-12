@@ -166,11 +166,7 @@ section{padding:120px 6vw;position:relative;}
 .intake .eyebrow::before{display:none;}
 .intake-title{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.5vw,4.4rem);line-height:1.05;color:var(--ink);letter-spacing:-0.025em;margin-bottom:16px;}
 .intake-title em{font-style:italic;color:var(--rust);}
-.intake-meta{display:flex;justify-content:center;gap:64px;margin:56px 0;flex-wrap:wrap;}
-.intake-meta-item{text-align:center;}
-.intake-meta-num{font-family:var(--serif);font-weight:400;font-size:3.4rem;color:var(--ink);line-height:1;letter-spacing:-0.025em;margin-bottom:10px;}
-.intake-meta-num.italic{font-style:italic;}
-.intake-meta-lbl{font-family:var(--sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:rgba(26,20,16,0.55);}
+.intake-stats{font-family:var(--sans);font-size:0.8rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin:32px 0 48px;}
 .btn-dark{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:0.92rem;font-weight:500;color:var(--cream);background:var(--ink);padding:20px 40px;border-radius:999px;text-decoration:none;transition:all 0.2s;border:1px solid var(--ink);}
 .btn-dark:hover{background:var(--rust);border-color:var(--rust);transform:translateY(-1px);}
 .btn-dark .arrow{transition:transform 0.3s;}
@@ -214,8 +210,6 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .included-item:nth-child(odd){padding-right:0;border-right:none;}
   .included-item:nth-child(even){padding-left:0;}
   .about-img{max-width:400px;}
-  .intake-meta{gap:36px;}
-  .intake-meta-num{font-size:2.6rem;}
 }
 @media(max-width:768px){
   section{padding:80px 5vw;}
@@ -487,20 +481,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   <div class="wrap-narrow">
     <span class="eyebrow">The Next Cohort</span>
     <h2 class="intake-title">Ten seats. <em>One conversation away.</em></h2>
-    <div class="intake-meta">
-      <div class="intake-meta-item">
-        <div class="intake-meta-num">12</div>
-        <div class="intake-meta-lbl">Weeks</div>
-      </div>
-      <div class="intake-meta-item">
-        <div class="intake-meta-num italic">10</div>
-        <div class="intake-meta-lbl">Seats</div>
-      </div>
-      <div class="intake-meta-item">
-        <div class="intake-meta-num">$2,500</div>
-        <div class="intake-meta-lbl">AUD</div>
-      </div>
-    </div>
+    <p class="intake-stats">12 weeks · 10 seats · Application only</p>
     <a href="REPLACE_WITH_CALENDLY_URL" class="btn-dark">Apply Now <span class="arrow">→</span></a>
     <p class="intake-foot">45 minutes. No pitch deck. No pressure.</p>
   </div>
