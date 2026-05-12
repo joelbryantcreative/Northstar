@@ -33,9 +33,8 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
 
 nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);padding:0 6vw;display:flex;justify-content:space-between;align-items:center;height:72px;border-bottom:1px solid var(--border);}
-.nav-logo{font-family:var(--serif);font-weight:700;font-size:1.5rem;color:var(--cream);text-decoration:none;letter-spacing:-0.01em;}
-.nav-logo .star{font-style:italic;font-weight:400;}
-.nav-logo .arrow{display:inline-block;color:var(--gold);font-size:0.7rem;position:relative;top:-0.5rem;margin-left:1px;}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{height:28px;display:block;filter:brightness(0) invert(1);}
 .nav-cta{font-family:var(--sans);font-size:0.78rem;font-weight:500;letter-spacing:0.01em;color:var(--cream);text-decoration:none;padding:11px 24px;border-radius:999px;border:1px solid rgba(242,232,213,0.3);transition:all 0.2s;}
 .nav-cta:hover{background:var(--cream);color:var(--ink);border-color:var(--cream);}
 
@@ -193,8 +192,8 @@ section{padding:120px 6vw;position:relative;}
 .final-sub{font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.6;color:var(--cream2);max-width:640px;margin:0 auto 48px;}
 
 footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;background:var(--ink);}
-.footer-logo{font-family:var(--serif);font-weight:700;font-size:1rem;color:var(--cream);letter-spacing:-0.01em;}
-.footer-logo .star{font-style:italic;font-weight:400;}
+.footer-logo{text-decoration:none;display:flex;align-items:center;}
+.footer-logo img{height:18px;display:block;filter:brightness(0) invert(1);}
 .footer-meta{font-family:var(--sans);font-size:0.78rem;color:var(--cream3);letter-spacing:0.01em;font-weight:300;}
 .footer-links{display:flex;gap:28px;}
 .footer-link{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--cream2);text-decoration:none;transition:color 0.2s;}
@@ -227,7 +226,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">NORTH<span class="star">star</span><span class="arrow">&#x25B4;</span></a>
+  <a href="#" class="nav-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
   <a href="REPLACE_WITH_CALENDLY_URL" class="nav-cta">Book a Call</a>
 </nav>
 
@@ -541,7 +540,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
 </section>
 
 <footer>
-  <a href="#" class="footer-logo">NORTH<span class="star">star</span></a>
+  <a href="#" class="footer-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
   <div class="footer-meta">&#xA9; 2026 Joel Bryant. Made in Byron Bay.</div>
   <div class="footer-links">
     <a href="https://instagram.com/joinnorthstar" class="footer-link" target="_blank">Instagram</a>
