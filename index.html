@@ -74,7 +74,8 @@ section{padding:120px 6vw;position:relative;}
 .sec-lede{font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.6;color:var(--cream2);max-width:640px;margin-top:24px;}
 .sec-lede.center{margin-left:auto;margin-right:auto;text-align:center;}
 
-.opportunity{background:var(--ink);text-align:center;}
+.opportunity{background:var(--ink);text-align:center;padding-top:0;}
+.opportunity-card{background:var(--ink-card);border-radius:16px 16px 0 0;border:1px solid var(--border);border-bottom:none;padding:48px 6vw 0;margin:0 -6vw;}
 .opportunity-inner{max-width:1300px;margin:0 auto;}
 .opportunity-body{margin-top:32px;font-family:var(--serif);font-weight:300;font-size:clamp(1.05rem,1.4vw,1.3rem);line-height:1.65;color:var(--cream2);}
 .opportunity-body em{font-style:italic;color:var(--gold);}
@@ -226,7 +227,9 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 }
 @media(max-width:768px){
   section{padding:60px 5vw;}
-  .hero{padding:20px 4vw 24px;min-height:auto;}
+  .hero{padding:20px 4vw 60px;min-height:auto;}
+  .opportunity{margin-top:-30px;padding-top:0;}
+  .opportunity-card{margin:0;border-radius:14px 14px 0 0;padding:36px 5vw 0;}
   .hero-h1{font-size:clamp(1.8rem,7.2vw,2.6rem);margin-bottom:16px;}
   .hero-sub{margin:0 auto 24px;max-width:265px;font-size:0.95rem;}
   .vsl-wrap{margin:0 0 24px;}
@@ -275,6 +278,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 </section>
 
 <section class="opportunity">
+  <div class="opportunity-card">
   <div class="opportunity-inner">
     <h2 class="sec-headline">There's never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
     <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder, every artist, every small studio is paying real money for the kind of work you already know how to make — or could learn to make in a year if you committed to it.</p>
@@ -288,6 +292,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
     </div>
 
     <p class="opportunity-body" style="margin-top:48px;"><em>Five years ago this economy didn't exist at this scale.</em></p>
+  </div>
   </div>
 </section>
 
