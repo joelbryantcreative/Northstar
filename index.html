@@ -128,15 +128,6 @@ section{padding:120px 6vw;position:relative;}
 .phase-weeks li .w{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--rust);min-width:32px;font-size:0.88rem;}
 
 .problem{background:var(--ink);}
-.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;}
-.problem-left{padding-top:8px;}
-.problem-left .sec-headline{margin-bottom:32px;}
-.problem-left .sec-body{font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.8;color:var(--cream2);max-width:480px;}
-.problem-right{display:flex;flex-direction:column;gap:14px;}
-.problem-card{background:var(--ink-card);border:1px solid var(--border);border-radius:8px;padding:24px 28px;display:flex;align-items:flex-start;gap:16px;transition:border-color 0.2s;}
-.problem-card:hover{border-color:rgba(212,169,84,0.2);}
-.problem-card-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;margin-top:8px;opacity:0.75;}
-.problem-card-text{font-family:var(--sans);font-size:0.92rem;line-height:1.65;color:var(--cream2);font-weight:300;}
 
 .fit{background:var(--ink);}
 .fit-headers{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:0;}
@@ -395,40 +386,18 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 
 <section class="problem">
   <div class="wrap">
-    <div class="problem-grid">
-      <div class="problem-left">
-        <span class="eyebrow">The Problem</span>
-        <h2 class="sec-headline">You’ve got the craft. <em>You’re missing the system.</em></h2>
-        <p class="sec-body">The gap between loving filmmaking and building a real business around it isn’t talent. It’s direction. Most people spin their wheels for years — watching tutorials, posting content, taking client work that doesn’t compound — without ever building something of their own.</p>
-        <p class="sec-body" style="margin-top:16px;">They don’t lack drive. They lack a compass.</p>
-      </div>
-      <div class="problem-right">
-        <div class="problem-card">
-          <div class="problem-card-dot"></div>
-          <p class="problem-card-text">You’ve got a 9-to-5 you’ve outgrown, and you’re trying to figure out how to step out of it without the whole thing falling apart.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card-dot"></div>
-          <p class="problem-card-text">You’re already shooting — weddings, events, brand work — and you can feel the version of you who started this slipping further away.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card-dot"></div>
-          <p class="problem-card-text">You’re building someone else’s brand, helping them tell their story while your own quietly waits in the corner.</p>
-        </div>
-        <div class="problem-card">
-          <div class="problem-card-dot"></div>
-          <p class="problem-card-text">You’re posting on Instagram or YouTube, watching the numbers tick up — and none of it is turning into a business that actually pays for the work you want to be making.</p>
-        </div>
-      </div>
-    </div>
+    <span class="eyebrow">The Problem</span>
+    <h2 class="sec-headline">You’ve got the craft. <em>You’re missing the system.</em></h2>
+    <p class="sec-lede">The gap between loving filmmaking and building a real business around it isn’t talent. It’s direction. Most people spin their wheels for years — watching tutorials, posting content, taking client work that doesn’t compound — without ever building something of their own.</p>
+    <p class="sec-lede" style="margin-top:16px;">They don’t lack drive. They lack a compass.</p>
   </div>
 </section>
 
 <section class="fit">
   <div class="wrap">
     <div class="fit-headers">
-      <h2 class="fit-heading fit-heading-yes">This <em>is</em> for you:</h2>
-      <h2 class="fit-heading fit-heading-no">This <em>isn’t</em> for you:</h2>
+      <h2 class="fit-heading fit-heading-yes">This <em>is</em> for you if:</h2>
+      <h2 class="fit-heading fit-heading-no">This <em>isn’t</em> for you if:</h2>
     </div>
     <div class="fit-rows">
       <div class="fit-row">
