@@ -16,6 +16,7 @@
 @font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
 @font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
 @font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Heavy.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block;}
 @font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
 
 :root{
@@ -41,7 +42,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.
 .hero{padding:100px 6vw 100px;position:relative;min-height:90vh;display:flex;align-items:center;}
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .hero-content-block{max-width:920px;width:100%;}
-.eyebrow{font-family:var(--sans);font-size:0.85rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:inline-flex;align-items:center;gap:14px;}
+.eyebrow{font-family:var(--sans);font-size:0.85rem;font-weight:800;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:inline-flex;align-items:center;gap:14px;}
 .eyebrow::before{display:none;}
 .eyebrow.centered{justify-content:center;}
 .hero-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.05;letter-spacing:-0.025em;color:var(--cream);margin-bottom:32px;}
@@ -58,7 +59,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.
 .vsl-play:hover{transform:scale(1.05);}
 .vsl-label{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream3);}
 
-.cta-primary{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:0.95rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);background:var(--cream);padding:18px 40px;border-radius:8px;text-decoration:none;transition:all 0.2s;border:1px solid rgba(242,232,213,0.4);text-transform:uppercase;}
+.cta-primary{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);background:var(--cream);padding:18px 40px;border-radius:8px;text-decoration:none;transition:all 0.2s;border:1px solid rgba(242,232,213,0.4);text-transform:uppercase;}
 .cta-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px);}
 .cta-primary .arrow{transition:transform 0.3s;display:none;}
 .cta-primary:hover .arrow{transform:translateX(4px);}
@@ -229,7 +230,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .hero-sub{margin:0 auto 28px;max-width:340px;}
   .vsl-wrap{margin:0 0 28px;}
   .eyebrow{font-size:0.62rem;letter-spacing:0.1em;}
-  .cta-primary,.btn-dark{width:auto;display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:16px 36px;font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:8px;gap:10px;}
+  .cta-primary,.btn-dark{width:auto;display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:16px 36px;font-size:0.88rem;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase;border-radius:8px;gap:10px;}
   .opp-cards{height:auto;margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 4px;}
   .opp-card{width:100% !important;aspect-ratio:3/4;transform:none !important;border-radius:10px;}
   .opp-card:nth-child(5){grid-column:1 / -1;max-width:50%;justify-self:center;}
@@ -251,7 +252,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   <div class="hero-inner">
     <div class="hero-content-block">
       <span class="eyebrow">Your videos should be paying you by now...</span>
-      <h1 class="hero-h1">Go from <em>passionate</em> creator to <em>paid</em> filmmaker.</h1>
+      <h1 class="hero-h1">Go from <em>passionate</em> creator<br>to <em>paid</em> filmmaker.</h1>
       <p class="hero-sub">For creatives wanting to make a living from work they <em>actually</em> want to make.</p>
 
       <div class="vsl-wrap">
