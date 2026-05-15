@@ -100,11 +100,11 @@ section{padding:120px 6vw;position:relative;}
 .system{background:var(--ink);padding-top:20px;padding-bottom:80px;}
 .system-icon{display:block;width:120px;height:auto;margin:0 auto 20px;opacity:0.85;filter:brightness(0) invert(1);}
 .system-header{text-align:center;max-width:760px;margin:0 auto 48px;}
-.pillars{display:flex;justify-content:center;gap:48px;}
-.pillar{text-align:center;max-width:360px;}
-.pillar-pill{display:inline-block;font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--cream);padding:14px 32px;border-radius:999px;border:1px solid var(--cream3);line-height:1.2;letter-spacing:-0.01em;}
-.pillar-pill em{font-style:italic;color:var(--gold);}
-.pillar-desc{font-family:var(--sans);font-weight:300;font-size:0.9rem;line-height:1.65;color:var(--cream3);margin-top:16px;}
+.pillars{display:flex;justify-content:center;gap:24px;}
+.pillar-pill{border:1px solid var(--cream3);border-radius:12px;padding:28px 32px;max-width:400px;flex:1;}
+.pillar-title{display:block;font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--cream);line-height:1.2;letter-spacing:-0.01em;margin-bottom:12px;}
+.pillar-title em{font-style:italic;color:var(--gold);}
+.pillar-desc{font-family:var(--sans);font-weight:300;font-size:0.88rem;line-height:1.6;color:var(--cream3);}
 .how-it-works{text-align:center;max-width:640px;margin:0 auto 56px;}
 .how-it-works .sec-headline{margin-bottom:24px;}
 .how-it-works .sec-lede{text-align:center;margin-left:auto;margin-right:auto;}
@@ -219,7 +219,8 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
   .problem-grid,.about-grid{grid-template-columns:1fr;gap:48px;}
   .fit-heading{font-size:1.2rem;padding:20px 16px;}
   .fit-cell{padding:16px 16px;font-size:0.85rem;}
-  .pillars{flex-direction:column;align-items:center;gap:36px;}
+  .pillars{flex-direction:column;align-items:center;gap:16px;}
+  .pillar-pill{max-width:100%;}
   .journey-track{grid-template-columns:1fr;gap:20px;}
   .included-grid{grid-template-columns:1fr;}
   .included-item:nth-child(odd){padding-right:0;border-right:none;}
@@ -288,7 +289,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
   <div class="opportunity-card">
   <div class="opportunity-inner">
     <h2 class="sec-headline">There’s never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
-    <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder, every creator, every premium event is paying real money for the kind of work you already know how to make... or could learn to make in a year if you committed to it.</p>
+    <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder, every creator, every premium event is paying real money for the kind of work you already know how to make... or could learn to make in 12 weeks if you committed to it.</p>
     <div class="opportunity-divider"></div>
     <div class="opp-cards">
       <div class="opp-card"><img src="images/Businesses.jpg" alt="Brands"><span class="opp-card-label">Brands</span></div>
@@ -320,12 +321,12 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
     </div>
 
     <div class="pillars">
-      <div class="pillar">
-        <span class="pillar-pill">Master the <em>art.</em></span>
+      <div class="pillar-pill">
+        <span class="pillar-title">Master the <em>art.</em></span>
         <p class="pillar-desc">Cinematography, editing, story. Not just technically competent work — work with a point of view, an emotional core, and a reason to exist.</p>
       </div>
-      <div class="pillar">
-        <span class="pillar-pill">Build the <em>business.</em></span>
+      <div class="pillar-pill">
+        <span class="pillar-title">Build the <em>business.</em></span>
         <p class="pillar-desc">Offer design, pricing, sales, delivery. How to find clients, charge what you’re worth, and create sustainable income.</p>
       </div>
     </div>
@@ -336,7 +337,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
   <div class="wrap">
     <div class="journey-header">
       <span class="eyebrow">The 12-Week Journey</span>
-      <h2 class="sec-headline">The NorthStar <em>Cohort.</em></h2>
+      <h2 class="sec-headline">The Northstar <em>Cohort.</em></h2>
       <p class="sec-lede">Everything you need to go from creative to professional, in 12 weeks.</p>
     </div>
     <div class="journey-track">
