@@ -63,7 +63,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.
 .cta-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px);}
 .cta-primary .arrow{transition:transform 0.3s;display:none;}
 .cta-primary:hover .arrow{transform:translateX(4px);}
-.hero-proof{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream3);margin-top:20px;}
+.hero-proof{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream);margin-top:20px;}
 .cta-meta{display:block;font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--cream3);margin-top:18px;}
 
 section{padding:120px 6vw;position:relative;}
@@ -232,9 +232,10 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .vsl-wrap{margin:0 0 24px;}
   .eyebrow{font-size:0.72rem;letter-spacing:0;}
   .cta-primary,.btn-dark{width:auto;display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:16px 36px;font-size:0.88rem;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase;border-radius:8px;gap:10px;}
-  .opp-cards{height:auto;margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 4px;}
-  .opp-card{width:100% !important;aspect-ratio:3/4;transform:none !important;border-radius:10px;}
-  .opp-card:nth-child(5){grid-column:1 / -1;max-width:50%;justify-self:center;}
+  .opp-cards{height:200px;margin-top:40px;}
+  .opp-card{width:100px;}
+  .opp-card:nth-child(3){width:115px;}
+  .opp-card-label{font-size:0.5rem;bottom:10px;left:10px;right:10px;letter-spacing:0.1em;}
   .final{padding:100px 5vw;}
   footer{flex-direction:column;text-align:center;}
   .footer-links{justify-content:center;flex-wrap:wrap;}
@@ -277,10 +278,10 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
     <div class="opportunity-divider"></div>
     <div class="opp-cards">
       <div class="opp-card"><img src="images/Craved1-thumbnail.jpg" alt="Brands"><span class="opp-card-label">Brands</span></div>
-      <div class="opp-card"><img src="images/Flowing-wood-thumbnail.jpg" alt="Creators & Influencers"><span class="opp-card-label">Creators & Influencers</span></div>
-      <div class="opp-card"><img src="images/Boat.jpg" alt="Real Estate & Property"><span class="opp-card-label">Real Estate & Property</span></div>
-      <div class="opp-card"><img src="images/Growth.jpg" alt="Founders & Personal Brands"><span class="opp-card-label">Founders & Personal Brands</span></div>
-      <div class="opp-card"><img src="images/Community.jpg" alt="Hospitality & Tourism"><span class="opp-card-label">Hospitality & Tourism</span></div>
+      <div class="opp-card"><img src="images/Flowing-wood-thumbnail.jpg" alt="Creators"><span class="opp-card-label">Creators</span></div>
+      <div class="opp-card"><img src="images/Boat.jpg" alt="Businesses"><span class="opp-card-label">Businesses</span></div>
+      <div class="opp-card"><img src="images/Growth.jpg" alt="Founders"><span class="opp-card-label">Founders</span></div>
+      <div class="opp-card"><img src="images/Community.jpg" alt="Events"><span class="opp-card-label">Events</span></div>
     </div>
 
     <p class="opportunity-body" style="margin-top:48px;"><em>Five years ago this economy didn't exist at this scale.</em></p>
