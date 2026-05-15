@@ -41,7 +41,7 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.
 .hero{padding:100px 6vw 100px;position:relative;min-height:90vh;display:flex;align-items:center;}
 .hero-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;}
 .hero-content-block{max-width:920px;width:100%;}
-.eyebrow{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:32px;display:inline-flex;align-items:center;gap:14px;font-style:italic;}
+.eyebrow{font-family:var(--sans);font-size:0.85rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:28px;display:inline-flex;align-items:center;gap:14px;}
 .eyebrow::before{display:none;}
 .eyebrow.centered{justify-content:center;}
 .hero-h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.05;letter-spacing:-0.025em;color:var(--cream);margin-bottom:32px;}
@@ -51,16 +51,16 @@ nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.
 .hero-stats{font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:48px;}
 
 .vsl-wrap{max-width:920px;width:100%;margin:0 0 48px;}
-.vsl-frame{position:relative;aspect-ratio:16/9;background:#0F0B07;border-radius:6px;overflow:hidden;border:1px solid var(--border2);box-shadow:0 24px 80px rgba(0,0,0,0.6);}
+.vsl-frame{position:relative;aspect-ratio:16/9;background:#0F0B07;border-radius:6px;overflow:hidden;border:2px solid rgba(242,232,213,0.25);box-shadow:0 24px 80px rgba(0,0,0,0.6);}
 .vsl-frame iframe,.vsl-frame video{position:absolute;inset:0;width:100%;height:100%;border:0;}
 .vsl-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:url('images/Halftone-Background.webp') center/cover no-repeat;}
 .vsl-play{width:84px;height:84px;border-radius:50%;background:var(--cream);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;transition:transform 0.3s;}
 .vsl-play:hover{transform:scale(1.05);}
 .vsl-label{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream3);}
 
-.cta-primary{display:inline-flex;align-items:center;gap:12px;font-family:var(--sans);font-size:0.92rem;font-weight:500;color:var(--ink);background:var(--cream);padding:18px 36px;border-radius:999px;text-decoration:none;transition:all 0.2s;border:1px solid var(--cream);}
+.cta-primary{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:0.95rem;font-weight:700;letter-spacing:-0.02em;color:var(--ink);background:var(--cream);padding:18px 40px;border-radius:8px;text-decoration:none;transition:all 0.2s;border:1px solid rgba(242,232,213,0.4);text-transform:uppercase;}
 .cta-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px);}
-.cta-primary .arrow{transition:transform 0.3s;}
+.cta-primary .arrow{transition:transform 0.3s;display:none;}
 .cta-primary:hover .arrow{transform:translateX(4px);}
 .cta-meta{display:block;font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--cream3);margin-top:18px;}
 
@@ -228,7 +228,7 @@ footer{padding:40px 6vw;border-top:1px solid var(--border);display:flex;justify-
   .hero-h1{font-size:clamp(1.55rem,5.6vw,2.1rem);margin-bottom:20px;}
   .hero-sub{margin:0 auto 28px;max-width:340px;}
   .vsl-wrap{margin:0 0 28px;}
-  .eyebrow{font-size:0.55rem;letter-spacing:0.12em;}
+  .eyebrow{font-size:0.62rem;letter-spacing:0.1em;}
   .cta-primary,.btn-dark{width:auto;display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:16px 36px;font-size:0.88rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;border-radius:8px;gap:10px;}
   .opp-cards{height:auto;margin-top:48px;display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:0 4px;}
   .opp-card{width:100% !important;aspect-ratio:3/4;transform:none !important;border-radius:10px;}
