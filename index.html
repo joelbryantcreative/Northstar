@@ -100,21 +100,11 @@ section{padding:120px 6vw;position:relative;}
 .system{background:var(--ink);padding-top:20px;padding-bottom:80px;}
 .system-icon{display:block;width:120px;height:auto;margin:0 auto 20px;opacity:0.85;filter:brightness(0) invert(1);}
 .system-header{text-align:center;max-width:760px;margin:0 auto 48px;}
-.lanes{display:grid;grid-template-columns:1fr auto 1fr;gap:0;}
-.lane{padding:48px 44px;position:relative;overflow:hidden;background:var(--ink-card);border:1px solid var(--border);}
-.lane-craft{border-radius:8px 0 0 8px;}
-.lane-commerce{border-radius:0 8px 8px 0;background:#241C12;}
-.lane::before{display:none;}
-.lane-tag{font-family:var(--sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:block;}
-.lane-title{font-family:var(--serif);font-weight:400;font-size:2.2rem;color:var(--cream);margin-bottom:20px;line-height:1.05;letter-spacing:-0.02em;}
-.lane-title em{font-style:italic;color:var(--gold);}
-.lane-body{font-family:var(--sans);font-weight:300;font-size:0.95rem;line-height:1.7;color:var(--cream2);margin-bottom:28px;}
-.lane-items{display:flex;flex-direction:column;gap:11px;}
-.lane-item{display:flex;align-items:center;gap:11px;font-size:0.88rem;color:var(--cream2);font-weight:300;}
-.lane-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);flex-shrink:0;opacity:0.7;}
-.lane-divider{display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold);padding:0 32px;}
-.lane-foot{margin-top:48px;text-align:center;font-family:var(--serif);font-style:italic;font-size:1.05rem;color:var(--cream3);max-width:680px;margin-left:auto;margin-right:auto;}
-.lane-foot em{color:var(--gold);font-style:italic;}
+.pillars{display:flex;justify-content:center;gap:48px;}
+.pillar{text-align:center;max-width:360px;}
+.pillar-pill{display:inline-block;font-family:var(--serif);font-weight:400;font-size:1.3rem;color:var(--cream);padding:14px 32px;border-radius:999px;border:1px solid var(--cream3);line-height:1.2;letter-spacing:-0.01em;}
+.pillar-pill em{font-style:italic;color:var(--gold);}
+.pillar-desc{font-family:var(--sans);font-weight:300;font-size:0.9rem;line-height:1.65;color:var(--cream3);margin-top:16px;}
 .how-it-works{text-align:center;max-width:640px;margin:0 auto 56px;}
 .how-it-works .sec-headline{margin-bottom:24px;}
 .how-it-works .sec-lede{text-align:center;margin-left:auto;margin-right:auto;}
@@ -228,10 +218,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 @media(max-width:960px){
   .problem-grid,.about-grid{grid-template-columns:1fr;gap:48px;}
   .fit-headers,.fit-row{grid-template-columns:1fr;}
-  .lanes{grid-template-columns:1fr;gap:2px;}
-  .lane-craft{border-radius:8px 8px 0 0;}
-  .lane-commerce{border-radius:0 0 8px 8px;}
-  .lane-divider{display:none;}
+  .pillars{flex-direction:column;align-items:center;gap:36px;}
   .journey-track{grid-template-columns:1fr;gap:20px;}
   .included-grid{grid-template-columns:1fr;}
   .included-item:nth-child(odd){padding-right:0;border-right:none;}
@@ -331,17 +318,14 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       <p class="sec-lede center">A small-group cohort where we work through everything together. The craft, the business, the mindset. You’ll also get lifetime access to <strong>The Modern Filmmaker System™</strong> Masterclass, a pre-recorded deep-dive you can work through at your own pace.</p>
     </div>
 
-    <div class="lanes">
-      <div class="lane lane-craft">
-        <h3 class="lane-title">Master the <em>art.</em></h3>
-        <p class="lane-body">Cinematography, editing, story. Not just technically competent work — work with a point of view, an emotional core, and a reason to exist. Work people share because they have to.</p>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="pillar-pill">Master the <em>art.</em></span>
+        <p class="pillar-desc">Cinematography, editing, story. Not just technically competent work — work with a point of view, an emotional core, and a reason to exist.</p>
       </div>
-
-      <div class="lane-divider">+</div>
-
-      <div class="lane lane-commerce">
-        <h3 class="lane-title">Build the <em>business.</em></h3>
-        <p class="lane-body">Offer design, pricing, sales, delivery. How to find clients, charge what you’re worth, and create sustainable income — without compromising the work that matters.</p>
+      <div class="pillar">
+        <span class="pillar-pill">Build the <em>business.</em></span>
+        <p class="pillar-desc">Offer design, pricing, sales, delivery. How to find clients, charge what you’re worth, and create sustainable income.</p>
       </div>
     </div>
   </div>
