@@ -149,18 +149,18 @@ section{padding:120px 6vw;position:relative;}
 .problem-card-text{font-family:var(--sans);font-size:0.92rem;line-height:1.65;color:var(--cream2);font-weight:300;}
 
 .fit{background:var(--ink);}
-.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:56px;align-items:start;}
+.fit-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;}
 .fit-list{display:flex;flex-direction:column;gap:14px;}
 .fit-item{display:flex;align-items:flex-start;gap:14px;padding:20px 24px;border-radius:8px;border:1px solid var(--border);transition:border-color 0.2s;}
 .fit-item:hover{border-color:rgba(212,169,84,0.22);}
 .fit-check{width:20px;height:20px;border-radius:50%;border:1.5px solid #4CAF50;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
 .fit-check svg{width:10px;height:10px;}
 .fit-text{font-family:var(--sans);font-size:0.92rem;line-height:1.55;color:var(--cream2);font-weight:300;}
-.fit-not-title{font-family:var(--sans);font-size:0.66rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:rgba(242,232,213,0.4);margin-bottom:24px;}
 .fit-not-list{display:flex;flex-direction:column;gap:14px;}
-.fit-not-item{font-family:var(--sans);font-size:0.9rem;color:rgba(242,232,213,0.4);padding-left:22px;position:relative;line-height:1.55;font-weight:300;}
-.fit-not-item::before{content:'x';position:absolute;left:0;color:#E53935;font-size:1.1rem;line-height:1;top:2px;}
-.fit-quote{margin-top:48px;padding:32px;background:var(--ink-card);border-radius:8px;border:1px solid var(--border);}
+.fit-not-item{display:flex;align-items:flex-start;gap:14px;padding:20px 24px;border-radius:8px;border:1px solid var(--border);transition:border-color 0.2s;}
+.fit-not-item:hover{border-color:rgba(229,57,53,0.22);}
+.fit-x{color:#E53935;font-size:1rem;font-weight:600;flex-shrink:0;margin-top:1px;line-height:1.4;}
+.fit-quote{margin-top:56px;padding:32px;background:var(--ink-card);border-radius:8px;border:1px solid var(--border);max-width:680px;margin-left:auto;margin-right:auto;text-align:center;}
 .fit-quote p{font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.6;color:var(--cream2);}
 .fit-quote .author{margin-top:14px;font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);}
 
@@ -435,47 +435,47 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 
 <section class="fit">
   <div class="wrap">
-    <span class="eyebrow">Is This For You?</span>
-    <h2 class="sec-headline">An honest <em>filter.</em></h2>
-
     <div class="fit-grid">
-      <div class="fit-list">
-        <div class="fit-item">
-          <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="fit-text">You love making videos, films, or stories — whether you’ve been doing it for years or you’re just getting started.</p>
-        </div>
-        <div class="fit-item">
-          <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="fit-text">You want to turn your camera into a real business — without becoming a content marketer along the way.</p>
-        </div>
-        <div class="fit-item">
-          <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="fit-text">You’re willing to ship a signature piece publicly inside twelve weeks, even if it scares you.</p>
-        </div>
-        <div class="fit-item">
-          <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="fit-text">You want to be in a small room with serious filmmakers, not on a Discord with three thousand strangers.</p>
-        </div>
-        <div class="fit-item">
-          <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
-          <p class="fit-text">You’re ready to do the work — you just need a clear system and someone who’s already done it.</p>
+      <div>
+        <h2 class="sec-headline" style="font-size:clamp(1.8rem,3.2vw,2.8rem);margin-bottom:32px;">This is for you <em>if —</em></h2>
+        <div class="fit-list">
+          <div class="fit-item">
+            <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="fit-text">You love making videos, films, or stories — whether you’ve been doing it for years or you’re just getting started.</p>
+          </div>
+          <div class="fit-item">
+            <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="fit-text">You want to turn your camera into a real business — without becoming a content marketer along the way.</p>
+          </div>
+          <div class="fit-item">
+            <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="fit-text">You’re willing to ship a signature piece publicly inside twelve weeks, even if it scares you.</p>
+          </div>
+          <div class="fit-item">
+            <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="fit-text">You want to be in a small room with serious filmmakers, not on a Discord with three thousand strangers.</p>
+          </div>
+          <div class="fit-item">
+            <div class="fit-check"><svg viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+            <p class="fit-text">You’re ready to do the work — you just need a clear system and someone who’s already done it.</p>
+          </div>
         </div>
       </div>
       <div>
-        <p class="fit-not-title">This isn’t for you if —</p>
+        <h2 class="sec-headline" style="font-size:clamp(1.8rem,3.2vw,2.8rem);margin-bottom:32px;">This isn’t for you <em>if —</em></h2>
         <div class="fit-not-list">
-          <p class="fit-not-item">You’re looking for a get-rich-quick scheme, a hack, or a way to skip the work.</p>
-          <p class="fit-not-item">You’re not willing to commit twelve weeks and show up for the live calls.</p>
-          <p class="fit-not-item">You want someone to do the creative work for you, or hand you a viral formula.</p>
-          <p class="fit-not-item">You think craft is everything and business is somehow beneath you.</p>
-          <p class="fit-not-item">You think business is everything and craft is somehow optional.</p>
-          <p class="fit-not-item">You want a course you can binge and forget. This is a cohort. You show up.</p>
-        </div>
-        <div class="fit-quote">
-          <p>“The compass I never had — built from everything it took to get here.”</p>
-          <p class="author">— Joel Bryant, Founder</p>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You’re looking for a get-rich-quick scheme, a hack, or a way to skip the work.</p></div>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You’re not willing to commit twelve weeks and show up for the live calls.</p></div>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You want someone to do the creative work for you, or hand you a viral formula.</p></div>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You think craft is everything and business is somehow beneath you.</p></div>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You think business is everything and craft is somehow optional.</p></div>
+          <div class="fit-not-item"><span class="fit-x">✕</span><p class="fit-text">You want a course you can binge and forget. This is a cohort. You show up.</p></div>
         </div>
       </div>
+    </div>
+    <div class="fit-quote">
+      <p>“The compass I never had — built from everything it took to get here.”</p>
+      <p class="author">— Joel Bryant, Founder</p>
     </div>
   </div>
 </section>
