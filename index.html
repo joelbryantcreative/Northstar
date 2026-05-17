@@ -143,12 +143,11 @@ section{padding:120px 6vw;position:relative;}
 .included{text-align:center;}
 .included-header{margin-bottom:56px;}
 .included-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;max-width:1200px;margin:0 auto;}
-.included-item{border:1px solid var(--cream);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;box-shadow:inset 0 0 30px rgba(212,169,84,0.1),inset 0 0 80px rgba(212,169,84,0.06);}
+.included-item{border:1px solid var(--cream);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;gap:12px;text-align:center;box-shadow:inset 0 0 30px rgba(212,169,84,0.1),inset 0 0 80px rgba(212,169,84,0.06);position:relative;overflow:hidden;}
+.included-item::before{content:'';position:absolute;inset:0;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' fill='none'%3E%3Cpath d='M15 55L40 80L85 20' stroke='rgba(212,169,84,0.06)' stroke-width='14' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-size:220%;background-position:center 60%;background-repeat:no-repeat;pointer-events:none;}
 .included-item:nth-child(odd){padding-right:24px;border-right:1px solid var(--cream);}
 .included-item:nth-child(even){padding-left:24px;}
-.included-num{min-width:auto;text-align:center;line-height:1;}
-.included-num img{width:22px;height:22px;filter:hue-rotate(-55deg) saturate(0.7) brightness(1.15);}
-.included-text{font-family:var(--sans);font-size:0.88rem;line-height:1.55;color:var(--cream2);font-weight:300;text-align:center;}
+.included-text{font-family:var(--sans);font-size:0.88rem;line-height:1.55;color:var(--cream2);font-weight:300;text-align:center;position:relative;z-index:1;}
 
 .fit{}
 .fit-headers{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:0;}
@@ -301,7 +300,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 <section class="opportunity">
   <div class="opportunity-card">
   <div class="opportunity-inner">
-    <h2 class="sec-headline">There’s never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
+    <h2 class="sec-headline">There's never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
     <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder,<br>every creator, every premium event is paying real money for the kind of work<br>you already know how to make... or could learn to make in 12 weeks.</p>
     <div class="opportunity-divider"></div>
     <div class="opp-cards">
@@ -312,7 +311,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       <div class="opp-card"><img src="images/Events.jpg" alt="Events"><span class="opp-card-label">Events</span></div>
     </div>
 
-    <p class="opportunity-pivot">Five years ago this economy didn’t exist at this scale.</p>
+    <p class="opportunity-pivot">Five years ago this economy didn't exist at this scale.</p>
   </div>
   </div>
 </section>
@@ -320,9 +319,9 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 <section class="problem">
   <div class="wrap" style="text-align:center;">
     <span class="eyebrow">The Problem</span>
-    <h2 class="sec-headline">You’ve got the craft.<br><em>You’re missing the system.</em></h2>
-    <p class="sec-lede center" style="max-width:880px;text-wrap:balance;">The gap between where you are and where you want to be as a video creator isn’t your talent. It’s your direction. Most people spin their wheels for years, watching tutorials, posting average content, taking client work that doesn’t compound... without ever building something of their own.</p>
-    <p class="sec-lede center" style="margin-top:16px;max-width:880px;">You don’t lack the drive. You lack the compass that guides you towards exactly where you want to go.</p>
+    <h2 class="sec-headline">You've got the craft.<br><em>You're missing the system.</em></h2>
+    <p class="sec-lede center" style="max-width:880px;text-wrap:balance;">The gap between where you are and where you want to be as a video creator isn't your talent. It's your direction. Most people spin their wheels for years, watching tutorials, posting average content, taking client work that doesn't compound... without ever building something of their own.</p>
+    <p class="sec-lede center" style="margin-top:16px;max-width:880px;">You don't lack the drive. You lack the compass that guides you towards exactly where you want to go.</p>
   </div>
 </section>
 
@@ -331,7 +330,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
     <div class="how-it-works">
       <span class="eyebrow centered">How Northstar Works</span>
       <h2 class="sec-headline">12 weeks. 12 live calls. <em>10 seats.</em></h2>
-      <p class="sec-lede center">A small-group cohort where we work through everything together. The craft, the business, the mindset. You’ll also get lifetime access to <strong style="font-weight:800;">The Modern Filmmaker System™</strong> Masterclass, a pre-recorded deep-dive you can work through at your own pace.</p>
+      <p class="sec-lede center">A small-group cohort where we work through everything together. The craft, the business, the mindset. You'll also get lifetime access to <strong style="font-weight:800;">The Modern Filmmaker System™</strong> Masterclass, a pre-recorded deep-dive you can work through at your own pace.</p>
     </div>
 
     <div class="pillars">
@@ -341,7 +340,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       </div>
       <div class="pillar-pill">
         <span class="pillar-title">Build the <em>business.</em></span>
-        <p class="pillar-desc">Offer design, pricing, sales, delivery. How to find clients, charge what you’re worth, and create sustainable income.</p>
+        <p class="pillar-desc">Offer design, pricing, sales, delivery. How to find clients, charge what you're worth, and create sustainable income.</p>
       </div>
     </div>
 
@@ -417,14 +416,14 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       <h2 class="sec-headline">Everything you get <em>access to.</em></h2>
     </div>
     <div class="included-grid">
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">12 live group calls with Joel across the 12 weeks</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Full Modern Filmmaker System masterclass — lifetime access</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Direct feedback from Joel on your offer and your work</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Live creative reviews on your pitches and projects</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Private cohort community — only 10 seats per intake</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Brand outreach templates and contract templates</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Rates sheet and media kit</div></div>
-      <div class="included-item"><span class="included-num"><img src="images/Check Mark.png" alt="✓"></span><div class="included-text">Lifetime access to course updates and future material</div></div>
+      <div class="included-item"><div class="included-text">12 live group calls with Joel across the 12 weeks</div></div>
+      <div class="included-item"><div class="included-text">Full Modern Filmmaker System masterclass — lifetime access</div></div>
+      <div class="included-item"><div class="included-text">Direct feedback from Joel on your offer and your work</div></div>
+      <div class="included-item"><div class="included-text">Live creative reviews on your pitches and projects</div></div>
+      <div class="included-item"><div class="included-text">Private cohort community — only 10 seats per intake</div></div>
+      <div class="included-item"><div class="included-text">Brand outreach templates and contract templates</div></div>
+      <div class="included-item"><div class="included-text">Rates sheet and media kit</div></div>
+      <div class="included-item"><div class="included-text">Lifetime access to course updates and future material</div></div>
     </div>
   </div>
 </section>
@@ -440,8 +439,8 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       </div>
       <div class="about-body">
         <p>Everything inside Northstar comes from real work. Real clients. Real projects. Real money earned doing the work I wanted to be doing.</p>
-        <p>I’ve spent years in the field; shooting, pitching, pricing, getting it wrong, adjusting, and building a creative business that actually works. Every lesson, every template, every live call in this cohort is something I’ve tested with my own career and my own money on the line.</p>
-        <p>You’re not learning theory from someone who read about it. <em>You’re getting the playbook from someone who’s still creating for a living day in and day out.</em></p>
+        <p>I've spent years in the field; shooting, pitching, pricing, getting it wrong, adjusting, and building a creative business that actually works. Every lesson, every template, every live call in this cohort is something I've tested with my own career and my own money on the line.</p>
+        <p>You're not learning theory from someone who read about it. <em>You're getting the playbook from someone who's still creating for a living day in and day out.</em></p>
       </div>
     </div>
   </div>
@@ -455,19 +454,19 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
     </div>
     <div class="fit-headers">
       <h2 class="fit-heading fit-heading-yes">This <em>is</em> for you if:</h2>
-      <h2 class="fit-heading fit-heading-no">This <em>isn’t</em> for you if:</h2>
+      <h2 class="fit-heading fit-heading-no">This <em>isn't</em> for you if:</h2>
     </div>
     <div class="fit-rows">
       <div class="fit-row">
-        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You love making videos, films, or stories — whether you’ve been doing it for years or you’re just getting started.</p></div>
-        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You’re looking for a get-rich-quick scheme, a hack, or a way to skip the work.</p></div>
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You love making videos, films, or stories — whether you've been doing it for years or you're just getting started.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You're looking for a get-rich-quick scheme, a hack, or a way to skip the work.</p></div>
       </div>
       <div class="fit-row">
         <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You want to turn your camera into a real business — without becoming a content marketer along the way.</p></div>
-        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You’re not willing to commit twelve weeks and show up for the live calls.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You're not willing to commit twelve weeks and show up for the live calls.</p></div>
       </div>
       <div class="fit-row">
-        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You’re willing to ship a signature piece publicly inside twelve weeks, even if it scares you.</p></div>
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You're willing to ship a signature piece publicly inside twelve weeks, even if it scares you.</p></div>
         <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You want someone to do the creative work for you, or hand you a viral formula.</p></div>
       </div>
       <div class="fit-row">
@@ -475,12 +474,12 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
         <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You think craft is everything and business is somehow beneath you.</p></div>
       </div>
       <div class="fit-row">
-        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You’re ready to do the work — you just need a clear system and someone who’s already done it.</p></div>
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You're ready to do the work — you just need a clear system and someone who's already done it.</p></div>
         <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You want a course you can binge and forget. This is a cohort. You show up.</p></div>
       </div>
     </div>
     <div class="fit-quote">
-      <p>“The compass I never had — built from everything it took to get here.”</p>
+      <p>"The compass I never had — built from everything it took to get here."</p>
       <p class="author">— Joel Bryant, Founder</p>
     </div>
   </div>
@@ -495,14 +494,14 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
     <div class="faq-list">
       <div class="faq-item">
         <button class="faq-q">When does the next cohort start?<span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Intake dates are confirmed on your strategy call once we’ve established it’s the right fit. Cohorts run back-to-back with short breaks, so the next start date is never more than a few weeks away.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Intake dates are confirmed on your strategy call once we've established it's the right fit. Cohorts run back-to-back with short breaks, so the next start date is never more than a few weeks away.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-q">How much time do I need each week?<span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">One live call per week, plus whatever time it takes to ship that week’s work. Most people land at 5–8 hours a week. The Build phase (weeks 5–8) is heavier — that’s where the signature piece actually gets made.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">One live call per week, plus whatever time it takes to ship that week's work. Most people land at 5–8 hours a week. The Build phase (weeks 5–8) is heavier — that's where the signature piece actually gets made.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-q">What if I can’t make a live call?<span class="faq-q-icon">+</span></button>
+        <button class="faq-q">What if I can't make a live call?<span class="faq-q-icon">+</span></button>
         <div class="faq-a"><div class="faq-a-inner">Every call is recorded and available within 24 hours. Live is better, but the cohort still works if you have to catch up on replays. The work you ship matters more than your attendance record.</div></div>
       </div>
       <div class="faq-item">
@@ -515,7 +514,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       </div>
       <div class="faq-item">
         <button class="faq-q">Why do I need a strategy call before I can buy?<span class="faq-q-icon">+</span></button>
-        <div class="faq-a"><div class="faq-a-inner">Because ten seats matter. I’d rather have ten filmmakers who are right for this than fifty who aren’t. The call is how we both figure that out. If we agree it’s a fit, you get the paywall link on the call. If we don’t, you leave with a clearer read on your next move.</div></div>
+        <div class="faq-a"><div class="faq-a-inner">Because ten seats matter. I'd rather have ten filmmakers who are right for this than fifty who aren't. The call is how we both figure that out. If we agree it's a fit, you get the paywall link on the call. If we don't, you leave with a clearer read on your next move.</div></div>
       </div>
     </div>
   </div>
