@@ -81,7 +81,10 @@ section{padding:120px 6vw;position:relative;}
 .sec-lede.center{margin-left:auto;margin-right:auto;text-align:center;}
 
 .opportunity{text-align:center;padding-top:120px;padding-bottom:40px;}
-.opportunity-card{}
+.opportunity-card{display:block;border-radius:14px;padding:48px 5vw 48px;background:var(--cream);border:1px solid var(--cream);}
+.opportunity-card .sec-headline{color:var(--ink);}
+.opportunity-card .sec-headline em{color:var(--rust);}
+.opportunity-card .opportunity-body{color:var(--ink);opacity:0.75;}
 .opportunity-inner{max-width:1300px;margin:0 auto;}
 .opportunity-body{margin-top:32px;font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:var(--cream2);}
 .opportunity-body br{display:inline;}
@@ -228,12 +231,9 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
   section{padding:60px 5vw;}
   .hero{padding:20px 4vw 60px;min-height:auto;}
   .opportunity{margin-top:-30px;padding-top:60px;padding-bottom:24px;padding-left:0;padding-right:0;}
-  .opportunity-card{display:block;margin:0 4vw;border-radius:14px;padding:36px 5vw 36px;background:var(--gold);border:1px solid var(--gold);box-shadow:none;}
+  .opportunity-card{margin:0 4vw;padding:36px 5vw 36px;}
   .opp-pill{font-size:0.7rem;padding:10px 20px;white-space:nowrap;}
   .opportunity .sec-headline{font-size:clamp(1.6rem,6.2vw,2.2rem);}
-  .opportunity-card .sec-headline{color:var(--ink);}
-  .opportunity-card .sec-headline em{color:var(--rust);}
-  .opportunity-card .opportunity-body{color:var(--ink);opacity:0.75;}
   .hero-h1{font-size:clamp(1.8rem,7.2vw,2.6rem);margin-bottom:16px;margin-top:24px;}
   .hero-sub{margin:0 auto 24px;max-width:265px;font-size:0.95rem;}
   .vsl-wrap{max-width:100%;margin:0 0 24px;}
@@ -410,7 +410,7 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
 <section class="included">
   <div class="wrap">
     <div class="included-header">
-      <span class="eyebrow">What’s Included</span>
+      <span class="eyebrow">What's Included</span>
       <h2 class="sec-headline">Everything you get <em>access to.</em></h2>
     </div>
     <div class="included-grid">
