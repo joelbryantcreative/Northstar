@@ -143,10 +143,10 @@ section{padding:120px 6vw;position:relative;}
 .included{text-align:center;}
 .included-header{margin-bottom:56px;}
 .included-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;max-width:1200px;margin:0 auto;}
-.included-item{border:1px solid var(--cream);border-radius:12px;padding:32px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;text-align:center;position:relative;overflow:hidden;aspect-ratio:16/9;background:linear-gradient(135deg,#2A2218 0%,#3D2E1A 40%,#4A3520 70%,#5C4225 100%);}
-.included-item:nth-child(odd){padding-right:24px;border-right:1px solid var(--cream);}
-.included-item:nth-child(even){padding-left:24px;}
-.included-text{font-family:var(--sans);font-size:0.88rem;line-height:1.55;color:var(--cream2);font-weight:800;text-align:center;position:relative;z-index:1;}
+.included-item{border:1px solid rgba(212,169,84,0.25);border-top:3px solid var(--gold);border-radius:10px;padding:36px 24px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;position:relative;overflow:hidden;aspect-ratio:16/9;background:linear-gradient(180deg,#2A2218 0%,#1F1A12 100%);box-shadow:0 8px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(212,169,84,0.08);transition:transform 0.2s,box-shadow 0.2s;}
+.included-item:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4),inset 0 1px 0 rgba(212,169,84,0.12);}
+.included-label{font-family:var(--sans);font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);opacity:0.7;}
+.included-text{font-family:var(--sans);font-size:0.92rem;line-height:1.45;color:var(--cream);font-weight:800;text-align:center;letter-spacing:-0.01em;}
 
 .fit{}
 .fit-headers{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:0;}
@@ -416,14 +416,14 @@ footer{padding:40px 6vw;display:flex;justify-content:space-between;align-items:c
       <h2 class="sec-headline">Everything you get <em>access to.</em></h2>
     </div>
     <div class="included-grid">
-      <div class="included-item"><div class="included-text">12 live group calls with Joel across 12 weeks</div></div>
-      <div class="included-item"><div class="included-text">The Modern Filmmaker System™ masterclass (lifetime access)</div></div>
-      <div class="included-item"><div class="included-text">Direct feedback from Joel on your work and offer</div></div>
-      <div class="included-item"><div class="included-text">Private cohort community (only 10 seats per intake)</div></div>
-      <div class="included-item"><div class="included-text">Signature LUT Collection Pack</div></div>
-      <div class="included-item"><div class="included-text">Director’s Ear™ SFX Pack</div></div>
-      <div class="included-item"><div class="included-text">Brand Outreach Templates and Contract Templates</div></div>
-      <div class="included-item"><div class="included-text">Rates Sheet and Media Kit</div></div>
+      <div class="included-item"><span class="included-label">Live Coaching</span><div class="included-text">12 Live Group Calls with Joel</div></div>
+      <div class="included-item"><span class="included-label">Masterclass</span><div class="included-text">The Modern Filmmaker System™</div></div>
+      <div class="included-item"><span class="included-label">Mentorship</span><div class="included-text">Direct Feedback on Your Work &amp; Offer</div></div>
+      <div class="included-item"><span class="included-label">Community</span><div class="included-text">Private Cohort (10 Seats Per Intake)</div></div>
+      <div class="included-item"><span class="included-label">Colour Grading</span><div class="included-text">Signature LUT Collection Pack</div></div>
+      <div class="included-item"><span class="included-label">Sound Design</span><div class="included-text">Director’s Ear™ SFX Pack</div></div>
+      <div class="included-item"><span class="included-label">Business</span><div class="included-text">Brand Outreach &amp; Contract Templates</div></div>
+      <div class="included-item"><span class="included-label">Business</span><div class="included-text">Rates Sheet &amp; Media Kit</div></div>
     </div>
   </div>
 </section>
