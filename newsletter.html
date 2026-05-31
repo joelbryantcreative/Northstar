@@ -44,7 +44,8 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
 .hero-bg img{width:100%;height:100%;object-fit:cover;}
 .hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(26,20,16,0.1) 0%,rgba(26,20,16,0.55) 50%,rgba(26,20,16,0.92) 100%);}
 .hero-content{position:relative;z-index:1;width:100%;max-width:520px;}
-.hero-masthead{font-family:var(--serif);font-size:clamp(2.8rem,10vw,4.2rem);font-weight:400;letter-spacing:-0.025em;color:var(--gold);line-height:1;margin-bottom:8px;}
+.hero-masthead{font-family:var(--sans);font-size:clamp(2.8rem,10vw,4.2rem);font-weight:400;letter-spacing:-0.02em;color:var(--cream);line-height:1.05;margin-bottom:8px;}
+.hero-masthead em{font-family:var(--serif);font-style:italic;color:var(--gold);letter-spacing:-0.025em;}
 .hero-byline{font-family:var(--sans);font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--cream);margin-bottom:28px;}
 .hero-body{font-family:var(--serif);font-weight:300;font-size:0.95rem;line-height:1.7;color:rgba(245,240,232,0.82);margin-bottom:28px;}
 .hero-body strong{font-weight:400;color:var(--cream);}
@@ -81,12 +82,14 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
 .the-story .section-header{color:var(--gold);}
 .the-story .section-body{color:rgba(242,232,213,0.72);}
 
-.whats-inside{background:var(--cream);}
+.whats-inside{background:var(--cream);text-align:center;}
 .whats-inside .section-header{color:var(--ink);}
-.whats-inside-list{list-style:none;display:flex;flex-direction:column;gap:16px;margin-top:8px;}
-.whats-inside-list li{font-family:var(--serif);font-weight:300;font-size:0.95rem;line-height:1.5;color:var(--ink);padding-left:20px;position:relative;}
-.whats-inside-list li::before{content:'\00b7';position:absolute;left:0;color:var(--gold);font-weight:700;font-size:1.2rem;line-height:1.3;}
-.whats-inside-list li strong{font-weight:400;}
+.whats-inside .section-wrap{max-width:960px;}
+.inside-cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:32px;}
+.inside-card{background:var(--ink-card);border-radius:12px;padding:32px 28px;text-align:left;border:1px solid rgba(212,169,84,0.15);box-shadow:inset 0 0 30px rgba(212,169,84,0.06);}
+.inside-card-title{font-family:var(--sans);font-size:0.95rem;font-weight:400;color:var(--cream);margin-bottom:10px;letter-spacing:-0.01em;}
+.inside-card-title em{font-family:var(--serif);font-style:italic;color:var(--gold);}
+.inside-card-desc{font-family:var(--serif);font-weight:300;font-size:0.88rem;line-height:1.6;color:rgba(242,232,213,0.6);}
 
 .final-cta{background:var(--ink);padding:64px 24px;text-align:center;}
 .final-cta-line{font-family:var(--serif);font-style:italic;font-size:clamp(1.1rem,3.5vw,1.4rem);color:var(--cream);line-height:1.5;margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto;}
@@ -99,6 +102,7 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
   .section{padding:80px 48px;}
   .form-card{padding:32px;}
   .nav{padding:0 48px;height:64px;}
+  .inside-cards{grid-template-columns:1fr 1fr;}
 }
 @media(min-width:960px){
   .hero{padding:0 80px 80px;}
@@ -124,7 +128,7 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
     <img src="images/Home-Cover.jpg" alt="">
   </div>
   <div class="hero-content">
-    <h1 class="hero-masthead">Behind<br>the Lens</h1>
+    <h1 class="hero-masthead"><em>Behind</em><br>the Lens.</h1>
     <p class="hero-byline">Weekly Newsletter</p>
     <p class="hero-body">Every Sunday I write about what's on my mind. Creativity, life, things I'm learning, things I'm building. The lessons nobody tells you about making a living from the work you actually want to do.<br><br>Expect direct links to things I'm working on, resources I build, and insider access before I share them anywhere else.<br><br><strong>I write every word myself, and I read every reply.</strong></p>
 
@@ -158,12 +162,24 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
 <section class="section whats-inside">
   <div class="section-wrap">
     <h2 class="section-header">What's Inside</h2>
-    <ul class="whats-inside-list">
-      <li><strong>Real stories and moments</strong> from behind the lens.</li>
-      <li><strong>How the work gets made.</strong> Insights into my creative process and the craft itself.</li>
-      <li><strong>The business side.</strong> What I'm learning building a creative life on my own terms.</li>
-      <li><strong>Early access.</strong> Resources, tools, and things I'm building, shared with you before anyone else.</li>
-    </ul>
+    <div class="inside-cards">
+      <div class="inside-card">
+        <p class="inside-card-title">Real <em>stories</em> and moments</p>
+        <p class="inside-card-desc">From behind the lens. The stuff that doesn't make it to Instagram.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-title">How the <em>work</em> gets made</p>
+        <p class="inside-card-desc">Insights into my creative process and the craft itself.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-title">The <em>business</em> side</p>
+        <p class="inside-card-desc">What I'm learning building a creative life on my own terms.</p>
+      </div>
+      <div class="inside-card">
+        <p class="inside-card-title"><em>Early</em> access</p>
+        <p class="inside-card-desc">Resources, tools, and things I'm building, shared with you before anyone else.</p>
+      </div>
+    </div>
   </div>
 </section>
 
