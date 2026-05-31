@@ -51,6 +51,13 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
 .hero-body strong{font-weight:400;color:var(--cream);}
 
 .form-card{background:rgba(255,255,255,0.97);border-radius:12px;padding:28px 24px;box-shadow:0 8px 40px rgba(0,0,0,0.15);}
+.form-card .formkit-form ~ .kit-fallback{display:none;}
+.kit-fallback{display:flex;flex-direction:column;gap:10px;}
+.kit-fallback input{width:100%;padding:14px 16px;font-family:var(--sans);font-size:0.9rem;font-weight:400;color:var(--ink);background:#fff;border:1px solid #ddd;border-radius:6px;outline:none;transition:border-color 0.2s;}
+.kit-fallback input::placeholder{color:#999;}
+.kit-fallback input:focus{border-color:var(--gold);}
+.kit-fallback button{width:100%;padding:15px 24px;font-family:var(--sans);font-size:0.85rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;color:var(--cream);background:var(--ink-card);border:none;border-radius:6px;cursor:pointer;transition:background 0.2s,transform 0.15s;}
+.kit-fallback button:hover{background:#8B4513;transform:translateY(-1px);}
 .form-card .formkit-form{max-width:none !important;}
 .form-card .formkit-fields{display:flex !important;flex-direction:column !important;gap:10px;}
 .form-card .formkit-field{margin:0 !important;flex:unset !important;}
@@ -133,6 +140,11 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
 
     <div class="form-card">
       <script async data-uid="c27e1f82d5" src="https://joelbryant.kit.com/c27e1f82d5/index.js"></script>
+      <form action="https://app.kit.com/forms/9504707/subscriptions" method="post" class="kit-fallback">
+        <input type="text" name="fields[full_name]" placeholder="Full Name" aria-label="Full Name">
+        <input type="email" name="email_address" placeholder="Email Address" aria-label="Email Address" required>
+        <button type="submit">Subscribe</button>
+      </form>
     </div>
   </div>
 </section>
