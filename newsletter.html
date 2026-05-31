@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Behind the Lens — Joel Bryant's Weekly Newsletter</title>
+<meta name="description" content="Lessons, stories, business tips, creative insights, and ideas from a filmmaker building in public. Written by Joel Bryant.">
+<meta property="og:title" content="Behind the Lens — Joel Bryant's Newsletter">
+<meta property="og:description" content="Weekly lessons, stories, and creative insights from a filmmaker building in public.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinnorthstar.co/newsletter">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<style>
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Heavy.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+
+:root{
+  --ink:#1A1410;--ink-soft:#231C16;--ink-card:#2A2218;
+  --cream:#F2E8D5;--cream2:rgba(242,232,213,0.72);--cream3:rgba(242,232,213,0.42);
+  --gold:#D4A954;--rust:#8B4513;
+  --border:rgba(242,232,213,0.08);
+  --serif:'Canela Text',Georgia,serif;
+  --sans:'SF Pro Display',system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:linear-gradient(90deg,rgba(26,20,16,0.15) 0%,rgba(50,35,18,0.14) 20%,rgba(90,58,22,0.12) 45%,rgba(120,80,35,0.14) 65%,rgba(150,105,45,0.18) 85%,rgba(180,130,55,0.22) 100%);}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.4);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);padding:0 6vw;display:flex;justify-content:space-between;align-items:center;height:72px;border-bottom:1px solid rgba(242,232,213,0.06);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{height:28px;display:block;filter:brightness(0) invert(1);}
+
+.newsletter{flex:1;display:flex;align-items:center;justify-content:center;padding:60px 6vw 80px;position:relative;}
+.newsletter-inner{max-width:640px;width:100%;text-align:center;}
+.newsletter-eyebrow{font-family:var(--sans);font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin-bottom:24px;display:inline-flex;align-items:center;gap:14px;padding:10px 24px;border-radius:999px;background:linear-gradient(135deg,rgba(212,169,84,0.12) 0%,rgba(212,169,84,0.04) 100%);border:1px solid rgba(212,169,84,0.25);}
+.newsletter-title{font-family:var(--sans);font-weight:400;font-size:clamp(2.4rem,5vw,4rem);line-height:1.05;letter-spacing:-0.02em;color:var(--cream);margin-bottom:12px;}
+.newsletter-title em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.newsletter-sub{font-family:var(--serif);font-style:italic;font-size:clamp(1rem,1.4vw,1.2rem);color:var(--gold);margin-bottom:40px;}
+.newsletter-body{font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.75;color:var(--cream2);max-width:520px;margin:0 auto 48px;text-wrap:balance;}
+.newsletter-body strong{font-weight:500;color:var(--cream);}
+
+.newsletter-form{max-width:440px;margin:0 auto;}
+.newsletter-form .formkit-fields{display:flex;flex-direction:column;gap:12px;}
+.newsletter-form .formkit-field{width:100%;}
+.newsletter-form .formkit-input{width:100%;padding:16px 20px;font-family:var(--sans);font-size:0.95rem;font-weight:300;color:var(--ink);background:var(--cream);border:1px solid rgba(242,232,213,0.4);border-radius:8px;outline:none;transition:border-color 0.2s;}
+.newsletter-form .formkit-input::placeholder{color:rgba(26,20,16,0.45);}
+.newsletter-form .formkit-input:focus{border-color:var(--gold);}
+.newsletter-form .formkit-submit{width:100%;padding:0;border:none;border-radius:8px;background:var(--ink-card);cursor:pointer;transition:all 0.2s;overflow:hidden;}
+.newsletter-form .formkit-submit:hover{background:var(--rust);transform:translateY(-1px);}
+.newsletter-form .formkit-submit span{display:block;padding:16px 24px;font-family:var(--sans);font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase;color:var(--cream);}
+.newsletter-form .formkit-alert-success{background:rgba(212,169,84,0.15);border:1px solid rgba(212,169,84,0.3);border-radius:8px;color:var(--gold);font-family:var(--sans);font-size:0.9rem;padding:16px;margin-top:16px;}
+.newsletter-form .formkit-alert-error{background:rgba(229,57,53,0.1);border:1px solid rgba(229,57,53,0.3);border-radius:8px;color:#E53935;font-family:var(--sans);font-size:0.9rem;padding:16px;margin-top:16px;}
+
+.newsletter-proof{margin-top:32px;font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream3);}
+
+.newsletter-divider{width:60px;height:1px;background:var(--border);margin:48px auto 0;}
+
+.newsletter-about{max-width:520px;margin:48px auto 0;text-align:center;}
+.newsletter-about-img{width:80px;height:80px;border-radius:50%;overflow:hidden;margin:0 auto 16px;border:2px solid var(--gold);box-shadow:0 0 20px rgba(212,169,84,0.2);}
+.newsletter-about-img img{width:100%;height:100%;object-fit:cover;}
+.newsletter-about-name{font-family:var(--sans);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:8px;}
+.newsletter-about-bio{font-family:var(--sans);font-weight:300;font-size:0.88rem;line-height:1.6;color:var(--cream3);}
+
+footer{padding:40px 6vw;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:20px;text-align:center;}
+.footer-logo{text-decoration:none;display:flex;align-items:center;}
+.footer-logo img{height:18px;display:block;filter:brightness(0) invert(1);}
+.footer-meta{font-family:var(--sans);font-size:0.78rem;color:var(--cream3);letter-spacing:0.01em;font-weight:300;}
+
+@media(max-width:768px){
+  .newsletter{padding:40px 5vw 60px;}
+  .newsletter-title{font-size:clamp(2rem,8vw,2.8rem);}
+  .newsletter-body{font-size:0.92rem;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
+</nav>
+
+<section class="newsletter">
+  <div class="newsletter-inner">
+    <span class="newsletter-eyebrow">Weekly Newsletter</span>
+    <h1 class="newsletter-title">Behind the <em>Lens.</em></h1>
+    <p class="newsletter-sub">Stories, lessons, and insights from a filmmaker building in public.</p>
+
+    <div class="newsletter-body">
+      <p>Every week, I share what I’m learning, creating, and thinking about — from the craft of filmmaking to the business of making it work. <strong>Creative insights, business tips, free resources, and updates on upcoming workshops and events.</strong></p>
+    </div>
+
+    <div class="newsletter-form">
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form action="https://app.kit.com/forms/9504707/subscriptions" class="seva-form formkit-form" method="post" data-sv-form="9504707" data-uid="c27e1f82d5" data-format="inline" data-version="5" data-options='{"settings":{"after_subscribe":{"action":"message","success_message":"Success! Check your email to confirm.","redirect_url":""},"analytics":{"google":null,"fathom":null,"facebook":null,"segment":null,"pinterest":null,"sparkloop":null,"googletagmanager":null},"modal":{"trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"powered_by":{"show":false,"url":"https://kit.com/features/forms?utm_campaign=poweredby&utm_content=form&utm_medium=referral&utm_source=dynamic"},"recaptcha":{"enabled":false},"return_visitor":{"action":"show","custom_content":""},"slide_in":{"display_in":"bottom_right","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15},"sticky_bar":{"display_in":"top","trigger":"timer","scroll_percentage":null,"timer":5,"devices":"all","show_once_every":15}},"version":"5"}' min-width="400 500 600 700 800">
+        <div data-style="clean">
+          <ul class="formkit-alert formkit-alert-error" data-element="errors" data-group="alert"></ul>
+          <div data-element="fields" data-stacked="false" class="seva-fields formkit-fields">
+            <div class="formkit-field">
+              <input class="formkit-input" aria-label="Full Name" name="fields[full_name]" placeholder="Full Name" type="text">
+            </div>
+            <div class="formkit-field">
+              <input class="formkit-input" name="email_address" aria-label="Email Address" placeholder="Email Address" required="" type="email">
+            </div>
+            <button data-element="submit" class="formkit-submit formkit-submit">
+              <div class="formkit-spinner"><div></div><div></div><div></div></div>
+              <span>Subscribe</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <p class="newsletter-proof">Free. Weekly. Unsubscribe anytime.</p>
+
+    <div class="newsletter-divider"></div>
+
+    <div class="newsletter-about">
+      <div class="newsletter-about-img">
+        <img src="images/DP 2.jpg" alt="Joel Bryant">
+      </div>
+      <p class="newsletter-about-name">Joel Bryant</p>
+      <p class="newsletter-about-bio">Filmmaker, founder of Northstar, and creator building a creative business in public. Writing about the craft, the business, and everything in between.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="/" class="footer-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
+  <div class="footer-meta">© 2026 Northstar</div>
+</footer>
+
+</body>
+</html>
