@@ -1,1 +1,576 @@
-<FILE>/home/user/Northstar/index.html.bak
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Northstar — A 12-week cohort for filmmakers</title>
+<meta name="description" content="Build a creative business around the work you actually want to make. A 12-week cohort for filmmakers who refuse to choose between the art and the business. Ten seats per intake.">
+<meta property="og:title" content="NorthStar — For filmmakers building real creative businesses">
+<meta property="og:description" content="Build a creative business around the work you actually want to make. Ten seats per intake.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://joinnorthstar.co">
+<meta property="og:image" content="https://joinnorthstar.co/images/Social%20Card.jpg">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<style>
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Heavy.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+
+:root{
+  --ink:#1A1410;--ink-soft:#231C16;--ink-card:#2A2218;--paper:#1f1610;
+  --cream:#F2E8D5;--cream2:rgba(242,232,213,0.72);--cream3:rgba(242,232,213,0.42);
+  --gold:#D4A954;--gold-soft:#C9A961;--amber:#A88842;--rust:#8B4513;
+  --border:rgba(242,232,213,0.08);--border2:rgba(242,232,213,0.16);
+  --serif:'Canela Text',Georgia,serif;
+  --sans:'SF Pro Display',system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:400;overflow-x:hidden;-webkit-font-smoothing:antialiased;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:linear-gradient(90deg,rgba(26,20,16,0.15) 0%,rgba(50,35,18,0.14) 20%,rgba(90,58,22,0.12) 45%,rgba(120,80,35,0.14) 65%,rgba(150,105,45,0.18) 85%,rgba(180,130,55,0.22) 100%);}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;opacity:0.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+nav{position:sticky;top:0;left:0;right:0;z-index:100;background:rgba(26,20,16,0.4);backdrop-filter:blur(20px) saturate(1.2);-webkit-backdrop-filter:blur(20px) saturate(1.2);padding:0 6vw;display:flex;justify-content:space-between;align-items:center;height:72px;border-bottom:1px solid rgba(242,232,213,0.06);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{height:28px;display:block;filter:brightness(0) invert(1);}
+.nav-cta{font-family:var(--sans);font-size:0.72rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);text-decoration:none;padding:10px 22px;border-radius:8px;background:var(--cream);border:1px solid rgba(242,232,213,0.4);transition:all 0.2s;text-transform:uppercase;}
+.nav-cta:hover{background:var(--gold);color:var(--ink);border-color:var(--gold);}
+
+.hero{padding:36px 6vw 40px;position:relative;min-height:auto;display:flex;align-items:center;}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;display:flex;flex-direction:column;align-items:center;text-align:center;}
+.hero-content-block{max-width:920px;width:100%;}
+.eyebrow{font-family:var(--sans);font-size:0.72rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--gold);margin-bottom:18px;display:inline-flex;align-items:center;gap:14px;padding:10px 24px;border-radius:999px;background:linear-gradient(135deg,rgba(212,169,84,0.12) 0%,rgba(212,169,84,0.04) 100%);border:1px solid rgba(212,169,84,0.25);}
+.eyebrow::before{display:none;}
+.eyebrow.centered{justify-content:center;}
+.hero-h1{font-family:var(--sans);font-weight:400;font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.05;letter-spacing:-0.02em;color:var(--cream);margin-bottom:20px;margin-top:0;}
+.hero-h1 em{font-style:italic;color:var(--gold);font-family:'Canela Text',serif;}
+.hero-sub{font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.3vw,1.15rem);line-height:1.6;color:var(--cream2);max-width:720px;margin:0 auto 24px;}
+.hero-sub em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.hero-stats{font-family:var(--sans);font-size:0.75rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--gold);margin-bottom:48px;}
+
+.vsl-wrap{max-width:680px;width:100%;margin:0 auto 28px;}
+.vsl-frame{position:relative;aspect-ratio:16/9;background:#0F0B07;border-radius:6px;overflow:hidden;border:1px solid var(--cream);box-shadow:0 24px 80px rgba(0,0,0,0.6);transform:translateY(60px);opacity:0;transition:transform 0.9s cubic-bezier(0.16,1,0.3,1),opacity 0.7s ease;}
+.vsl-frame.revealed{transform:translateY(0);opacity:1;}
+.vsl-frame iframe,.vsl-frame video{position:absolute;inset:0;width:100%;height:100%;border:0;}
+.vsl-placeholder{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;background:url('images/Halftone-Background.webp') center/cover no-repeat;}
+.vsl-play{width:84px;height:84px;border-radius:50%;background:var(--cream);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:28px;cursor:pointer;transition:transform 0.3s;}
+.vsl-play:hover{transform:scale(1.05);}
+.vsl-label{font-family:var(--sans);font-size:0.7rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--cream3);}
+
+.cta-primary{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;color:var(--ink);background:var(--cream);padding:18px 40px;border-radius:8px;text-decoration:none;transition:all 0.2s;border:1px solid rgba(242,232,213,0.4);text-transform:uppercase;}
+.cta-primary:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-1px);}
+.cta-primary .arrow{transition:transform 0.3s;display:none;}
+.cta-primary:hover .arrow{transform:translateX(4px);}
+.hero-proof{font-family:var(--sans);font-size:0.72rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--cream);margin-top:14px;}
+.cta-meta{display:block;font-family:var(--serif);font-style:italic;font-size:0.95rem;color:var(--cream3);margin-top:18px;}
+.scroll-cue{display:flex;flex-direction:column;align-items:center;gap:10px;padding:60px 0 20px;}
+.scroll-cue-text{font-family:var(--sans);font-size:1.1rem;font-weight:800;letter-spacing:-0.05em;text-transform:uppercase;background:linear-gradient(135deg,#e6c385 0%,#D4A954 40%,#A88842 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0 0 12px rgba(212,169,84,0.4)) drop-shadow(0 0 24px rgba(212,169,84,0.2));opacity:0;transform:translateY(20px);animation:fadeSlideUp 0.8s ease forwards 0.6s;}
+.scroll-cue-arrow{font-family:var(--sans);font-size:1.5rem;color:var(--cream);opacity:0;transform:translateY(20px);animation:fadeSlideUp 0.8s ease forwards 1s,bounce 2s infinite 1.8s;}
+@keyframes fadeSlideUp{to{opacity:1;transform:translateY(0);}}
+@keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(6px);}}
+
+section{padding:120px 6vw;position:relative;}
+.wrap{max-width:1200px;margin:0 auto;}
+.wrap-narrow{max-width:880px;margin:0 auto;}
+.sec-headline{font-family:var(--sans);font-weight:400;font-size:clamp(2.4rem,4.8vw,4.4rem);line-height:1.05;letter-spacing:-0.02em;color:var(--cream);}
+.sec-headline em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.sec-lede{font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.6;color:var(--cream2);max-width:640px;margin-top:24px;}
+.sec-lede.center{margin-left:auto;margin-right:auto;text-align:center;}
+
+.opportunity{text-align:center;padding-top:0;padding-bottom:40px;}
+.opportunity-card{display:block;border-radius:14px;padding:48px 5vw 48px;background:var(--cream);border:1px solid var(--cream);}
+.opportunity-card .sec-headline{color:var(--ink);font-family:var(--sans);font-weight:400;letter-spacing:-0.02em;}
+.opportunity-card .sec-headline em{color:var(--rust);font-family:var(--serif);font-weight:400;font-style:italic;letter-spacing:-0.025em;}
+.opportunity-card .opportunity-body{color:var(--ink);opacity:0.75;}
+.opportunity-inner{max-width:1300px;margin:0 auto;}
+.opportunity-body{margin-top:32px;font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.5vw,1.35rem);line-height:1.6;color:var(--cream2);max-width:960px;margin-left:auto;margin-right:auto;}
+.opportunity-body br{display:inline;}
+.opportunity-body em{font-style:italic;color:var(--gold);}
+.opportunity-divider{display:none;}
+.opportunity-pivot{font-family:var(--serif);font-style:italic;font-weight:400;font-size:clamp(1rem,1.3vw,1.2rem);color:var(--ink);opacity:0.5;max-width:880px;margin:48px auto 0;line-height:1.65;text-align:center;}
+.opp-pill{display:inline-block;font-family:var(--serif);font-style:normal;font-size:clamp(0.85rem,1.2vw,1.05rem);color:#e6c385;padding:14px 32px;border-radius:999px;border:1px solid var(--cream);background:var(--ink-card);line-height:1.4;}
+.opp-pill-wrap{position:relative;display:flex;justify-content:center;margin-top:48px;}
+.opp-arrow-img{display:none;}
+.opp-cards{display:flex;justify-content:center;align-items:flex-end;gap:0;margin-top:64px;position:relative;height:340px;}
+.opp-card{width:200px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;position:relative;box-shadow:0 12px 40px rgba(0,0,0,0.5);transition:transform 0.7s cubic-bezier(0.16,1,0.3,1),opacity 0.6s ease;flex-shrink:0;opacity:0;}
+.opp-card:hover{transform:translateY(-8px) !important;}
+.opp-card img{width:100%;height:100%;object-fit:cover;filter:brightness(0.75) saturate(0.85);}
+.opp-card-label{position:absolute;bottom:16px;left:16px;right:16px;font-family:var(--serif);font-size:1.05rem;font-weight:400;letter-spacing:0.02em;text-transform:capitalize;color:var(--gold);z-index:1;}
+.opp-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(26,20,16,0.8) 0%,transparent 50%);}
+.opp-card:nth-child(1){transform:rotate(0deg) translateY(40px);z-index:1;}
+.opp-card:nth-child(2){transform:rotate(0deg) translateY(40px);z-index:2;}
+.opp-card:nth-child(3){transform:rotate(0deg) translateY(40px);z-index:3;width:220px;}
+.opp-card:nth-child(4){transform:rotate(0deg) translateY(40px);z-index:2;}
+.opp-card:nth-child(5){transform:rotate(0deg) translateY(40px);z-index:1;}
+.opp-cards.revealed .opp-card{opacity:1;}
+.opp-cards.revealed .opp-card:nth-child(1){transform:rotate(-8deg) translateY(20px);transition-delay:0.1s;}
+.opp-cards.revealed .opp-card:nth-child(2){transform:rotate(-4deg) translateY(6px);transition-delay:0.2s;}
+.opp-cards.revealed .opp-card:nth-child(3){transform:rotate(0deg) translateY(0);transition-delay:0.3s;}
+.opp-cards.revealed .opp-card:nth-child(4){transform:rotate(4deg) translateY(6px);transition-delay:0.4s;}
+.opp-cards.revealed .opp-card:nth-child(5){transform:rotate(8deg) translateY(20px);transition-delay:0.5s;}
+.opp-card:nth-child(5) img{filter:brightness(0.85) saturate(1);}
+
+.system{padding-top:100px;padding-bottom:40px;}
+.system-icon{display:block;width:360px;height:auto;margin:0 auto;}
+.system-header{text-align:center;max-width:760px;margin:0 auto 60px;}
+.pillars{display:flex;justify-content:center;gap:24px;}
+.pillar-pill{border:1px solid var(--gold);border-radius:12px;padding:28px 32px;max-width:400px;flex:1;text-align:center;box-shadow:inset 0 0 30px rgba(212,169,84,0.1),inset 0 0 80px rgba(212,169,84,0.06);}
+.pillar-title{display:block;font-family:var(--sans);font-weight:400;font-size:1.3rem;color:var(--cream);line-height:1.2;letter-spacing:-0.01em;margin-bottom:12px;}
+.pillar-title em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.pillar-desc{font-family:var(--sans);font-weight:300;font-size:0.88rem;line-height:1.6;color:var(--cream3);}
+.how-it-works{text-align:center;max-width:880px;margin:0 auto 56px;}
+.how-it-works .sec-headline{margin-bottom:24px;white-space:nowrap;}
+.how-it-works .sec-lede{text-align:center;margin-left:auto;margin-right:auto;}
+
+.journey{padding-top:20px;}
+.journey-header{margin-bottom:64px;text-align:center;}
+.journey-track{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;position:relative;}
+.journey-track::before{display:none;}
+.phase{position:relative;padding:0;background:var(--cream);border:none;border-radius:8px;overflow:hidden;-webkit-backface-visibility:hidden;backface-visibility:hidden;}
+.phase-img{width:100%;aspect-ratio:16/10;overflow:hidden;}
+.phase-img img{width:100%;height:100%;object-fit:cover;filter:brightness(0.85) saturate(0.9);}
+.phase-body{padding:32px 32px 36px;}
+.phase-dot{display:none;}
+.phase-num{font-family:var(--sans);font-size:0.66rem;font-weight:500;letter-spacing:0.16em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;margin-top:8px;}
+.phase-name{font-family:var(--serif);font-weight:400;font-size:2.4rem;letter-spacing:-0.025em;margin-bottom:8px;color:var(--ink);}
+.phase-tagline{font-family:var(--serif);font-style:italic;font-weight:400;color:var(--rust);font-size:1.1rem;margin-bottom:18px;}
+.phase-desc{font-family:var(--sans);font-size:0.9rem;line-height:1.6;color:var(--ink);margin-bottom:24px;font-weight:300;opacity:0.7;}
+.phase-weeks{list-style:none;border-top:1px solid rgba(26,20,16,0.12);}
+.phase-weeks li{font-family:var(--sans);font-size:0.88rem;padding:11px 0;border-bottom:1px solid rgba(26,20,16,0.12);display:flex;gap:14px;color:var(--ink);font-weight:400;}
+.phase-weeks li:last-child{border-bottom:none;}
+.phase-weeks li .w{font-family:var(--serif);font-weight:600;font-style:italic;color:var(--rust);min-width:32px;font-size:0.88rem;}
+
+.problem{padding-bottom:60px;}
+
+.included{text-align:center;}
+.included-header{margin-bottom:56px;}
+.included-grid{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:20px;max-width:1200px;margin:0 auto;}
+.included-item{border:1px solid rgba(212,169,84,0.25);border-top:3px solid var(--gold);border-radius:10px;padding:36px 24px 28px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;position:relative;overflow:hidden;aspect-ratio:16/9;background:linear-gradient(180deg,#2A2218 0%,#1F1A12 100%);box-shadow:0 8px 32px rgba(0,0,0,0.3),inset 0 1px 0 rgba(212,169,84,0.08);transition:transform 0.2s,box-shadow 0.2s;}
+.included-item:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4),inset 0 1px 0 rgba(212,169,84,0.12);}
+.included-label{font-family:var(--sans);font-size:0.6rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);opacity:0.7;}
+.included-text{font-family:var(--sans);font-size:0.92rem;line-height:1.45;color:var(--cream);font-weight:800;text-align:center;letter-spacing:-0.01em;}
+
+.fit{}
+.fit-headers{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-bottom:0;}
+.fit-heading{font-family:var(--sans);font-weight:400;font-size:clamp(1.6rem,2.8vw,2.4rem);line-height:1.1;letter-spacing:-0.02em;color:var(--cream);padding:28px 32px;}
+.fit-heading em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.fit-heading-yes{background:rgba(169,152,128,0.15);border-radius:8px 0 0 0;}
+.fit-heading-no{background:var(--ink-card);border-radius:0 8px 0 0;}
+.fit-rows{display:flex;flex-direction:column;}
+.fit-row{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);}
+.fit-cell{display:flex;align-items:flex-start;gap:14px;padding:22px 32px;font-family:var(--sans);font-size:0.92rem;line-height:1.55;font-weight:300;}
+.fit-cell p{color:var(--cream2);}
+.fit-cell-yes{background:rgba(169,152,128,0.15);}
+.fit-cell-no{background:var(--ink-card);}
+.fit-icon{width:14px;height:14px;flex-shrink:0;margin-top:3px;}
+.fit-x{color:#E53935;font-size:1rem;font-weight:600;flex-shrink:0;margin-top:1px;line-height:1.4;}
+.fit-rows .fit-row:last-child .fit-cell-yes{border-radius:0 0 0 8px;}
+.fit-rows .fit-row:last-child .fit-cell-no{border-radius:0 0 8px 0;}
+.fit-quote{margin-top:0;padding:36px 40px 32px;background:linear-gradient(180deg,rgba(255,255,255,0.95) 0%,rgba(242,232,213,0.85) 100%);border-radius:12px;border:none;max-width:560px;margin-left:auto;margin-right:auto;text-align:center;box-shadow:0 4px 20px rgba(0,0,0,0.25),0 1px 3px rgba(0,0,0,0.15);position:relative;}
+.fit-quote p{font-family:var(--serif);font-style:italic;font-size:1.1rem;line-height:1.6;color:var(--ink);opacity:0.8;}
+.fit-quote .author{margin-top:14px;font-family:var(--sans);font-size:0.7rem;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;color:var(--rust);}
+
+.about{text-align:center;}
+.about-grid{display:flex;flex-direction:column;align-items:center;gap:40px;margin-top:48px;}
+.about-img{position:relative;width:240px;aspect-ratio:1/1;background:linear-gradient(135deg,var(--ink-card) 0%,var(--ink) 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--cream3);font-family:var(--serif);font-style:italic;font-size:0.95rem;border:3px solid var(--gold);overflow:hidden;box-shadow:0 0 30px rgba(212,169,84,0.3),0 0 60px rgba(212,169,84,0.15);}
+.about-img img{width:100%;height:100%;object-fit:cover;}
+.about-body{font-family:var(--sans);font-weight:300;font-size:1rem;line-height:1.75;color:var(--cream2);max-width:620px;text-wrap:balance;}
+.about-body p{margin-bottom:20px;}
+.about-body p:first-of-type::first-letter{}
+.about-body em{font-style:italic;color:var(--cream);}
+.about-tagline{margin-top:48px;padding-top:32px;border-top:1px solid var(--border);font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.35;letter-spacing:-0.01em;color:var(--cream);}
+.about-tagline em{font-style:italic;color:var(--gold);}
+
+.intake{background:var(--cream);color:var(--ink);text-align:center;}
+.intake .eyebrow{color:var(--rust);justify-content:center;background:linear-gradient(135deg,rgba(139,69,19,0.12) 0%,rgba(139,69,19,0.04) 100%);border-color:rgba(139,69,19,0.25);}
+.intake .eyebrow::before{display:none;}
+.intake-title{font-family:var(--serif);font-weight:400;font-size:clamp(2rem,4vw,3.8rem);line-height:1.05;color:var(--ink);letter-spacing:-0.025em;margin-bottom:16px;}
+.intake-title em{font-style:italic;color:var(--rust);}
+.intake-stats{font-family:var(--sans);font-size:0.8rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--rust);margin:32px 0 48px;}
+.btn-dark{display:inline-flex;align-items:center;gap:10px;font-family:var(--sans);font-size:0.95rem;font-weight:800;letter-spacing:-0.02em;color:var(--cream);background:var(--ink-card);padding:18px 40px;border-radius:8px;text-decoration:none;transition:all 0.2s;border:1px solid var(--ink-card);text-transform:uppercase;}
+.btn-dark:hover{background:var(--rust);border-color:var(--rust);transform:translateY(-1px);}
+.btn-dark .arrow{transition:transform 0.3s;display:none;}
+.btn-dark:hover .arrow{transform:translateX(4px);}
+
+.faq{}
+.faq-header{margin-bottom:48px;text-align:center;}
+.faq-list{max-width:880px;border-top:1px solid var(--border);}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-q{width:100%;background:none;border:none;color:var(--cream);text-align:left;font-family:var(--serif);font-weight:400;font-size:1.3rem;letter-spacing:-0.01em;padding:28px 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:24px;transition:color 0.2s;}
+.faq-q:hover{color:var(--gold);}
+.faq-q-icon{font-family:var(--serif);font-style:italic;font-size:1.6rem;color:var(--gold);transition:transform 0.3s ease;flex-shrink:0;}
+.faq-item.open .faq-q-icon{transform:rotate(45deg);}
+.faq-a{max-height:0;overflow:hidden;transition:max-height 0.4s ease;}
+.faq-item.open .faq-a{max-height:400px;}
+.faq-a-inner{padding:0 0 30px;font-family:var(--sans);font-size:0.95rem;line-height:1.7;color:var(--cream2);font-weight:300;max-width:760px;}
+
+.final{text-align:center;padding:140px 6vw;}
+.final-inner{max-width:880px;margin:0 auto;}
+.final-title{font-family:var(--sans);font-weight:400;font-size:clamp(2.6rem,5.5vw,5rem);line-height:1.05;letter-spacing:-0.02em;color:var(--cream);margin-bottom:32px;}
+.final-title em{font-style:italic;color:var(--gold);font-family:var(--serif);}
+.final-sub{font-family:var(--sans);font-weight:300;font-size:clamp(1rem,1.2vw,1.1rem);line-height:1.6;color:var(--cream2);max-width:640px;margin:0 auto 48px;}
+
+footer{padding:40px 6vw;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:20px;text-align:center;}
+.footer-logo{text-decoration:none;display:flex;align-items:center;}
+.footer-logo img{height:18px;display:block;filter:brightness(0) invert(1);}
+.footer-meta{font-family:var(--sans);font-size:0.78rem;color:var(--cream3);letter-spacing:0.01em;font-weight:300;}
+.footer-links{display:flex;gap:28px;}
+.footer-link{font-family:var(--sans);font-size:0.78rem;font-weight:500;color:var(--cream2);text-decoration:none;transition:color 0.2s;}
+.footer-link:hover{color:var(--gold);}
+
+.scroll-reveal{opacity:0;transform:translateY(30px);transition:opacity 0.7s ease,transform 0.7s cubic-bezier(0.16,1,0.3,1);-webkit-backface-visibility:hidden;backface-visibility:hidden;}
+.scroll-reveal.revealed{opacity:1;transform:translateY(0);}
+.scroll-reveal-delay-1{transition-delay:0.1s;}
+.scroll-reveal-delay-2{transition-delay:0.2s;}
+.scroll-reveal-delay-3{transition-delay:0.25s;}
+
+@media(max-width:960px){
+  .opportunity-body br{display:none;}
+  .problem-grid,.about-grid{grid-template-columns:1fr;gap:48px;}
+  .included-grid{grid-template-columns:1fr 1fr;}
+  .included-item{aspect-ratio:5/4;}
+  .fit-heading{font-size:1.2rem;padding:20px 16px;}
+  .fit-cell{padding:16px 16px;font-size:0.85rem;}
+  .pillars{flex-direction:column;align-items:center;gap:16px;}
+  .pillar-pill{max-width:100%;}
+  .journey-track{grid-template-columns:1fr;gap:20px;}
+  .about-img{width:200px;}
+}
+@media(max-width:768px){
+  section{padding:60px 5vw;}
+  .hero{padding:20px 4vw 60px;min-height:auto;}
+  .opportunity{margin-top:0;padding-top:0;padding-bottom:24px;padding-left:0;padding-right:0;}
+  .opportunity-card{margin:0 4vw;padding:36px 5vw 36px;}
+  .opp-pill{font-size:0.7rem;padding:10px 20px;white-space:nowrap;}
+  .opportunity .sec-headline{font-size:clamp(1.6rem,6.2vw,2.2rem);}
+  .opportunity-body{font-size:0.88rem;}
+  .opportunity-pivot{font-size:0.82rem;}
+  .hero-h1{font-size:clamp(1.8rem,7.2vw,2.6rem);margin-bottom:16px;margin-top:24px;}
+  .journey .sec-lede{font-size:0.82rem;}
+  .journey-header{margin-bottom:20px;}
+  .hero-sub{margin:0 auto 24px;max-width:265px;font-size:0.95rem;}
+  .vsl-wrap{max-width:100%;margin:0 0 24px;}
+  .eyebrow{font-size:0.65rem;letter-spacing:0.04em;padding:8px 18px;}
+  .cta-primary,.btn-dark{width:auto;display:inline-flex;justify-content:center;align-items:center;text-align:center;padding:16px 36px;font-size:0.88rem;font-weight:800;letter-spacing:-0.02em;text-transform:uppercase;border-radius:8px;gap:10px;}
+  .opp-cards{height:auto;margin-top:40px;display:flex;flex-wrap:wrap;justify-content:center;gap:0;position:relative;}
+  .opp-card{width:30%;aspect-ratio:3/4;flex-shrink:0;}
+  .opp-card:nth-child(1){transform:rotate(0deg) translateY(30px);z-index:1;}
+  .opp-card:nth-child(2){transform:rotate(0deg) translateY(30px);z-index:3;}
+  .opp-card:nth-child(3){transform:rotate(0deg) translateY(30px);z-index:1;width:30%;}
+  .opp-card:nth-child(4){transform:rotate(0deg) translateY(30px);z-index:2;width:34%;margin-right:-4%;}
+  .opp-card:nth-child(5){transform:rotate(0deg) translateY(30px);z-index:2;width:34%;margin-left:-4%;}
+  .opp-cards.revealed .opp-card:nth-child(1){transform:rotate(-6deg) translateY(0);}
+  .opp-cards.revealed .opp-card:nth-child(2){transform:rotate(0deg) translateY(-8px);}
+  .opp-cards.revealed .opp-card:nth-child(3){transform:rotate(6deg) translateY(0);}
+  .opp-cards.revealed .opp-card:nth-child(4){transform:rotate(-4deg) translateY(-12px);}
+  .opp-cards.revealed .opp-card:nth-child(5){transform:rotate(4deg) translateY(-12px);}
+  .opp-card-label{font-size:0.7rem;bottom:10px;left:10px;right:10px;letter-spacing:0.02em;}
+  .system{padding-top:12px;padding-bottom:48px;}
+  .system-icon{width:240px;}
+  .system-header{margin-bottom:32px;}
+  .how-it-works{margin-bottom:40px;max-width:100%;}
+  .how-it-works .sec-headline{white-space:normal;}
+  .scroll-cue{padding:32px 0 20px;}
+  .final{padding:100px 5vw;}
+  .footer-links{flex-wrap:wrap;}
+}
+</style>
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
+  <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="nav-cta">Apply Now</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content-block">
+      <h1 class="hero-h1">Go from <em>passionate</em> creator<br>to <em>paid</em> filmmaker.</h1>
+      <p class="hero-sub">For video creators ready to make a living from work they <em>actually</em> want to make.</p>
+
+      <div class="vsl-wrap">
+        <div class="vsl-frame">
+          <iframe src="https://player.vimeo.com/video/1192222467?title=0&byline=0&portrait=0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="cta-primary">
+        Apply Now <span class="arrow">→</span>
+      </a>
+      <p class="hero-proof">Only 10 seats per cohort.</p>
+    </div>
+  </div>
+</section>
+
+<div class="scroll-cue">
+  <span class="scroll-cue-text">Learn More</span>
+  <span class="scroll-cue-arrow">↓</span>
+</div>
+
+<section class="opportunity">
+  <div class="opportunity-card">
+  <div class="opportunity-inner">
+    <h2 class="sec-headline">There's never been more <em>opportunity</em> for people who can tell a story with a camera.</h2>
+    <p class="opportunity-body">Every brand needs content. Every business needs video. Every founder, <br>every creator, every premium event is paying real money for the kind of work <br>you already know how to make... or could learn to make in 12 weeks.</p>
+    <div class="opportunity-divider"></div>
+    <div class="opp-cards">
+      <div class="opp-card"><img src="images/Businesses.jpg" alt="Brands"><span class="opp-card-label">Brands</span></div>
+      <div class="opp-card"><img src="images/Boat.jpg" alt="Creators"><span class="opp-card-label">Creators</span></div>
+      <div class="opp-card"><img src="images/Biz.jpg" alt="Businesses"><span class="opp-card-label">Businesses</span></div>
+      <div class="opp-card"><img src="images/Founders.jpg" alt="Founders"><span class="opp-card-label">Founders</span></div>
+      <div class="opp-card"><img src="images/Events.jpg" alt="Events"><span class="opp-card-label">Events</span></div>
+    </div>
+
+    <p class="opportunity-pivot">Five years ago this economy didn't exist at this scale.</p>
+  </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="wrap" style="text-align:center;">
+    <span class="eyebrow">The Problem</span>
+    <h2 class="sec-headline">You've got the craft.<br><em>You're missing the system.</em></h2>
+    <p class="sec-lede center" style="max-width:880px;text-wrap:balance;">The gap between where you are and where you want to be as a video creator isn't your talent. It's your direction. Most people spin their wheels for years, watching tutorials, posting average content, taking client work that doesn't compound... without ever building something of their own.</p>
+    <p class="sec-lede center" style="margin-top:16px;max-width:880px;">You don't lack the drive. You lack the compass that guides you towards exactly where you want to go.</p>
+  </div>
+</section>
+
+<section class="system">
+  <div class="wrap">
+    <div class="how-it-works">
+      <span class="eyebrow centered">How Northstar Works</span>
+      <h2 class="sec-headline">12 weeks. 12 live calls. <em>10 seats.</em></h2>
+      <p class="sec-lede center">A small-group cohort where we work through everything together. The craft, the business, the mindset. You'll also get lifetime access to <strong style="font-weight:800;">The Modern Filmmaker System™</strong> Masterclass, a pre-recorded deep-dive you can work through at your own pace.</p>
+    </div>
+
+    <div class="pillars">
+      <div class="pillar-pill scroll-reveal">
+        <span class="pillar-title">Master the <em>art.</em></span>
+        <p class="pillar-desc">Cinematography, editing, story. Not just technically competent work, but work with a point of view, an emotional core, and a reason to exist.</p>
+      </div>
+      <div class="pillar-pill scroll-reveal scroll-reveal-delay-1">
+        <span class="pillar-title">Build the <em>business.</em></span>
+        <p class="pillar-desc">Offer design, pricing, sales, and delivery. Learn how to find clients, charge what you're worth, and create sustainable income to set yourself up for success.</p>
+      </div>
+    </div>
+
+    <p class="sec-lede center" style="margin-top:48px;font-family:var(--serif);font-size:clamp(0.95rem,1.4vw,1.25rem);">Northstar teaches both, integrated from day one.</p>
+  </div>
+</section>
+
+<section class="journey">
+  <div class="wrap">
+    <img src="images/Northstar.gif" alt="NorthStar" class="system-icon" style="margin-bottom:40px;">
+    <div class="journey-header">
+      <span class="eyebrow">The 12-Week Journey</span>
+      <h2 class="sec-headline">The Northstar <em>Cohort.</em></h2>
+      <p class="sec-lede center">Everything you need to go from creative to professional, in 12 weeks.</p>
+    </div>
+    <div class="journey-track">
+      <div class="phase scroll-reveal">
+        <div class="phase-dot">1</div>
+        <div class="phase-img"><img src="images/1 Become.jpg" alt="Become"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 01 · Weeks 1–4</div>
+          <div class="phase-name">Become</div>
+          <div class="phase-tagline">Creating you.</div>
+          <p class="phase-desc">Identity, niche, point of view, and the brief for the signature piece you'll make in the cohort.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W1</span> Obsession &amp; Identity</li>
+            <li><span class="w">W2</span> Niche &amp; Point of View</li>
+            <li><span class="w">W3</span> The Signal</li>
+            <li><span class="w">W4</span> The Brief</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase scroll-reveal scroll-reveal-delay-1">
+        <div class="phase-dot">2</div>
+        <div class="phase-img"><img src="images/1 Build.jpg" alt="Build"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 02 · Weeks 5–8</div>
+          <div class="phase-name">Build</div>
+          <div class="phase-tagline">Showing the world.</div>
+          <p class="phase-desc">The signature piece gets made, released, and the content drumbeat begins.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W5</span> The Make</li>
+            <li><span class="w">W6</span> The Edit</li>
+            <li><span class="w">W7</span> The Reveal</li>
+            <li><span class="w">W8</span> The Drumbeat</li>
+          </ul>
+        </div>
+      </div>
+      <div class="phase scroll-reveal scroll-reveal-delay-2">
+        <div class="phase-dot">3</div>
+        <div class="phase-img"><img src="images/1 Earn.jpg" alt="Earn"></div>
+        <div class="phase-body">
+          <div class="phase-num">Phase 03 · Weeks 9–12</div>
+          <div class="phase-name">Earn</div>
+          <div class="phase-tagline">Getting paid and building forward.</div>
+          <p class="phase-desc">Offer, pricing, sales, delivery, and the loop.</p>
+          <ul class="phase-weeks">
+            <li><span class="w">W9</span> Offers &amp; Pricing</li>
+            <li><span class="w">W10</span> The Conversation</li>
+            <li><span class="w">W11</span> Delivery &amp; The Loop</li>
+            <li><span class="w">W12</span> The Sovereign Plan</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="included">
+  <div class="wrap">
+    <div class="included-header">
+      <span class="eyebrow">What's Included</span>
+      <h2 class="sec-headline">Everything you get <em>access to.</em></h2>
+    </div>
+    <div class="included-grid">
+      <div class="included-item scroll-reveal"><span class="included-label">Live Coaching</span><div class="included-text">12 Live Group Calls with Joel</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-1"><span class="included-label">Masterclass</span><div class="included-text">The Modern Filmmaker System</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-2"><span class="included-label">Mentorship</span><div class="included-text">Feedback on Your Work</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-3"><span class="included-label">Community</span><div class="included-text">Private Cohort (10 Seats)</div></div>
+      <div class="included-item scroll-reveal"><span class="included-label">Colour Grading</span><div class="included-text">Signature LUT Collection Pack</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-1"><span class="included-label">Sound Design</span><div class="included-text">Director's Ear™ SFX Pack</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-2"><span class="included-label">Business</span><div class="included-text">Outreach &amp; Contract Templates</div></div>
+      <div class="included-item scroll-reveal scroll-reveal-delay-3"><span class="included-label">Business</span><div class="included-text">Rates Sheet &amp; Media Kit</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="about">
+  <div class="wrap">
+    <span class="eyebrow">Meet Your Mentor</span>
+    <h2 class="sec-headline">Taught from <em>lived experience.</em></h2>
+
+    <div class="about-grid">
+      <div class="about-img">
+        <img src="images/DP 2.jpg" alt="Joel Bryant">
+      </div>
+      <div class="fit-quote">
+        <p>"The cohort is the compass I never had, built from everything it took to get here."</p>
+        <p class="author">— Joel Bryant, Founder</p>
+      </div>
+      <div class="about-body">
+        <p>Everything inside Northstar comes from real work. Real clients. Real projects. Real money earned doing the work I wanted to be doing.</p>
+        <p>I've spent years in the field; shooting, pitching, pricing, getting it wrong, adjusting, and building a creative business that actually works. Every lesson, every template, every live call in this cohort is something I've tested with my own career and my own money on the line.</p>
+        <p>You're not learning theory from someone who read about it. <em>You're getting the playbook from someone who's still creating for a living day in and day out.</em></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fit">
+  <div class="wrap">
+    <div style="text-align:center;margin-bottom:56px;">
+      <span class="eyebrow">The Right Fit</span>
+      <h2 class="sec-headline">Who is this <em>for?</em></h2>
+    </div>
+    <div class="fit-headers">
+      <h2 class="fit-heading fit-heading-yes">This <em>is</em> for you if:</h2>
+      <h2 class="fit-heading fit-heading-no">This <em>isn't</em> for you if:</h2>
+    </div>
+    <div class="fit-rows">
+      <div class="fit-row">
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You love making videos, films, or stories - whether you've been doing it for years or you're just getting started.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You're looking for a get-rich-quick scheme, a hack, or a way to skip the work.</p></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You want to turn your camera or phone into a real business.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You're not willing to commit twelve weeks and show up for the live calls.</p></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You're willing to create a signature piece publicly inside twelve weeks, even if it scares you.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You want someone to do the creative work for you, or hand you a viral formula.</p></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You want to be in a small room with serious filmmakers, not on a Discord with three thousand strangers.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You think craft is everything and business is somehow beneath you.</p></div>
+      </div>
+      <div class="fit-row">
+        <div class="fit-cell fit-cell-yes"><svg class="fit-icon" viewBox="0 0 10 10" fill="none"><polyline points="1.5,5 4,7.5 8.5,2.5" stroke="#4CAF50" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg><p>You're ready to do the work - you just need a clear system and someone who's already done it.</p></div>
+        <div class="fit-cell fit-cell-no"><span class="fit-x">✕</span><p>You want a course you can binge and forget.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="wrap-narrow">
+    <div class="faq-header">
+      <span class="eyebrow">Questions</span>
+      <h2 class="sec-headline">Things you might be <em>wondering.</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">When does the next cohort start?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Intake dates are confirmed on your discovery call once we've established it's the right fit. Cohorts run back-to-back with short breaks, so the next start date is never more than a few weeks away.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How much time do I need each week?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">One live call per week (one hour each), plus the time you spend working on your assignments, projects, and creative progress outside of calls. We recommend dedicating at least 5–8 hours a week to the work to build momentum.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if I can't make a live call?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Every call is recorded and available within 24 hours. Live is better, but the cohort still works if you have to catch up on replays. The work you create matters more than your attendance record.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What kind of gear do I need?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Whatever you already have. A camera or phone, as long as it can shoot arguably good quality videos. As long as you can make work with the tools in your hand right now, that's what matters. The cohort is about building a business around the work, not about gear hoarding.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Is this for filmmakers, freelance videographers, or content creators?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">All of the above and everything in between. Documentary, brand storytelling, freelance videography, content for founders. The principles; finding your creative identity, crafting your signature work, building an offer, and growing an audience are universal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Why do I need a discovery call before I can buy?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a"><div class="faq-a-inner">Because ten seats matter. I'd rather have ten filmmakers and creatives who are right for this than fifty who aren't. The discovery call is where I learn more about you and your creative goals, so I can ensure it's a fit for both of us. If it is, you'll have access to the payment link to lock in your spot right after the call. If the fit's not quite right, you'll leave the call with a clearer read on your next move forward on your creative journey.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="intake" id="intake">
+  <div class="wrap-narrow">
+    <span class="eyebrow">The Next Cohort</span>
+    <h2 class="intake-title">Ten seats. <em>One conversation away.</em></h2>
+    <p class="intake-stats">12 weeks · 12 calls · Application only</p>
+    <a href="#" onclick="Calendly.initPopupWidget({url:'https://calendly.com/joelbryant/northstar-cohort-discovery-call'});return false;" class="btn-dark">Apply Now <span class="arrow">→</span></a>
+  </div>
+</section>
+
+<footer>
+  <a href="#" class="footer-logo"><img src="images/Main-Logo.png" alt="NorthStar"></a>
+  <div class="footer-meta">© 2026 Northstar</div>
+  <div class="footer-links">
+    <a href="https://instagram.com/joinnorthstar" class="footer-link" target="_blank" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+  </div>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!wasOpen) item.classList.add('open');
+    });
+  });
+
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+
+  document.querySelectorAll('.vsl-frame, .opp-cards, .scroll-reveal').forEach(el => revealObs.observe(el));
+</script>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+</body>
+</html>
