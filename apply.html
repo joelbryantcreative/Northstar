@@ -48,6 +48,8 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
 .q-title{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,4.2vw,2.6rem);line-height:1.15;letter-spacing:-0.02em;color:var(--cream);margin-bottom:14px;text-wrap:balance;}
 .q-title em{font-family:var(--serif);font-style:italic;color:var(--gold);}
 .q-hint{font-family:var(--serif);font-style:italic;font-weight:300;font-size:1rem;line-height:1.55;color:var(--cream2);margin-bottom:32px;text-wrap:balance;}
+.q-context{font-family:var(--sans);font-weight:300;font-size:1.05rem;line-height:1.65;color:var(--cream2);margin-bottom:22px;text-wrap:balance;}
+.q-context em{font-family:var(--serif);font-style:italic;color:var(--gold);}
 
 .field{margin-bottom:24px;}
 .input,.textarea{width:100%;padding:16px 18px;font-family:var(--sans);font-size:1rem;font-weight:400;color:var(--cream);background:var(--ink-card);border:1px solid var(--border);border-radius:8px;outline:none;transition:border-color 0.2s;}
@@ -203,7 +205,8 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
 
     <div class="step" data-step="7" data-field="commitment" data-required="true">
       <span class="eyebrow">Question 7 of 7</span>
-      <h2 class="q-title">Northstar runs across 12 weeks and 12 live calls. By the end, you'll release a <em>signature piece</em> publicly, even if it scares you. Ready for that?</h2>
+      <p class="q-context">Northstar runs across 12 weeks and 12 live calls. By the end, you'll release a <em>signature piece</em> publicly, even if it scares you.</p>
+      <h2 class="q-title">Ready for <em>that?</em></h2>
       <div class="choices">
         <div class="choice"><input type="radio" id="com-1" name="commitment" value="Yes, I'm in and ready to commit"><label for="com-1">Yes, I'm in and ready to commit</label></div>
         <div class="choice"><input type="radio" id="com-2" name="commitment" value="I want to, but I've got questions"><label for="com-2">I want to, but I've got questions</label></div>
