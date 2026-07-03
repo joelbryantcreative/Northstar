@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>You're in — The Northstar Film Guide</title>
+<meta name="robots" content="noindex">
+<meta property="og:image" content="https://joinnorthstar.co/images/Social%20Card%202.jpg">
+<link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<style>
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
+@font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Medium.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Heavy.woff2') format('woff2');font-weight:800;font-style:normal;font-display:block;}
+@font-face{font-family:'SF Pro Display';src:url('fonts/SFProDisplay-Light.woff2') format('woff2');font-weight:300;font-style:normal;font-display:block;}
+
+:root{
+  --ink:#1A1410;
+  --ink-card:#2A2218;
+  --cream:#F2E8D5;
+  --gold:#D4A954;
+  --serif:'Canela Text',Georgia,serif;
+  --sans:'SF Pro Display',system-ui,sans-serif;
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weight:400;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column;}
+
+.nav{padding:0 24px;height:56px;display:flex;justify-content:center;align-items:center;background:var(--ink);}
+.nav-logo{text-decoration:none;display:flex;align-items:center;}
+.nav-logo img{height:22px;display:block;filter:brightness(0) invert(1);}
+
+.thank-you{flex:1;display:flex;align-items:center;justify-content:center;padding:48px 24px;text-align:center;}
+.thank-you-inner{max-width:540px;}
+.thank-you-eyebrow{display:inline-block;font-family:var(--sans);font-size:0.7rem;font-weight:800;letter-spacing:0.16em;text-transform:uppercase;color:var(--gold);margin-bottom:20px;}
+.thank-you-heading{font-family:var(--sans);font-size:clamp(2.2rem,8vw,3.6rem);font-weight:400;letter-spacing:-0.02em;color:var(--cream);line-height:1.05;margin-bottom:24px;}
+.thank-you-heading em{font-family:var(--serif);font-style:italic;color:var(--gold);letter-spacing:-0.025em;}
+.thank-you-body{font-family:var(--serif);font-weight:300;font-size:1rem;line-height:1.75;color:rgba(242,232,213,0.72);margin-bottom:20px;}
+.thank-you-body em{font-style:italic;color:var(--cream);}
+.thank-you-sign{font-family:var(--serif);font-style:italic;font-size:1.1rem;color:var(--gold);margin-top:8px;}
+
+@media(min-width:640px){
+  .nav{height:64px;}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar"></a>
+</nav>
+
+<section class="thank-you">
+  <div class="thank-you-inner">
+    <span class="thank-you-eyebrow">You're In</span>
+    <h1 class="thank-you-heading">The guide is on its <em>way.</em></h1>
+    <p class="thank-you-body">Check your inbox in the next minute or two. The first email has the link to the guide, and the next five come daily.</p>
+    <p class="thank-you-body">If it doesn't land, check spam or promotions and mark it as safe. Everything I send goes to the same place.</p>
+    <p class="thank-you-sign">— Joel</p>
+  </div>
+</section>
+
+</body>
+</html>
