@@ -53,7 +53,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;o
 .hero-sub{font-family:var(--sans);font-weight:300;font-size:clamp(0.95rem,1.3vw,1.05rem);line-height:1.65;color:var(--cream2);max-width:460px;margin:0 auto 36px;text-wrap:balance;}
 .hero-sub em{font-family:var(--serif);font-style:italic;color:var(--gold);}
 
-.form-card{background:rgba(255,255,255,0.97);border-radius:12px;padding:24px;box-shadow:0 8px 40px rgba(0,0,0,0.25);max-width:420px;margin:0 auto;text-align:left;}
+.form-card{background:rgba(255,255,255,0.97);border-radius:12px;padding:18px;box-shadow:0 8px 40px rgba(0,0,0,0.25);max-width:420px;margin:0 auto;text-align:left;}
+.form-card [data-style="clean"]{padding:0 !important;}
 .form-card .formkit-form ~ .kit-fallback{display:none;}
 .kit-fallback{display:flex;flex-direction:column;gap:10px;}
 .kit-fallback input{width:100%;padding:14px 16px;font-family:var(--sans);font-size:0.95rem;font-weight:400;color:var(--ink);background:#fff;border:1px solid #ddd;border-radius:6px;outline:none;transition:border-color 0.2s;}
@@ -62,16 +63,16 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:1000;o
 .kit-fallback button{width:100%;padding:16px 24px;margin-top:4px;font-family:var(--sans);font-size:0.85rem;font-weight:800;letter-spacing:0.06em;text-transform:uppercase;color:var(--cream);background:var(--ink-card);border:none;border-radius:6px;cursor:pointer;transition:background 0.2s,transform 0.15s;}
 .kit-fallback button:hover{background:var(--rust);transform:translateY(-1px);}
 .form-card .formkit-form{max-width:none !important;}
-.form-card .formkit-fields{display:flex !important;flex-direction:column !important;gap:10px;}
+.form-card .formkit-fields{display:flex !important;flex-direction:column !important;gap:10px;margin:0 !important;}
 .form-card .formkit-field{margin:0 !important;flex:unset !important;}
 .form-card .formkit-input{width:100% !important;padding:14px 16px !important;font-family:var(--sans) !important;font-size:0.95rem !important;font-weight:400 !important;color:var(--ink) !important;background:#fff !important;border:1px solid #ddd !important;border-radius:6px !important;outline:none !important;transition:border-color 0.2s !important;line-height:1.4 !important;}
 .form-card .formkit-input::placeholder{color:#999 !important;opacity:1 !important;}
 .form-card .formkit-input:focus{border-color:var(--gold) !important;}
-.form-card .formkit-submit{width:100% !important;padding:0 !important;margin-top:4px !important;font-family:var(--sans) !important;font-size:0.85rem !important;font-weight:800 !important;letter-spacing:0.06em !important;text-transform:uppercase !important;color:var(--cream) !important;background:var(--ink-card) !important;border:none !important;border-radius:6px !important;cursor:pointer !important;transition:background 0.2s,transform 0.15s !important;}
+.form-card .formkit-submit{width:100% !important;padding:0 !important;margin:4px 0 0 0 !important;font-family:var(--sans) !important;font-size:0.85rem !important;font-weight:800 !important;letter-spacing:0.06em !important;text-transform:uppercase !important;color:var(--cream) !important;background:var(--ink-card) !important;border:none !important;border-radius:6px !important;cursor:pointer !important;transition:background 0.2s,transform 0.15s !important;}
 .form-card .formkit-submit:hover{background:var(--rust) !important;transform:translateY(-1px) !important;}
 .form-card .formkit-submit span{display:block !important;padding:16px 24px !important;}
-.form-card .formkit-alert{padding:12px;border-radius:6px;margin:10px 0 0;text-align:center;font-family:var(--sans);font-size:0.85rem;list-style:none;}
-.form-card .formkit-alert:empty{display:none;}
+.form-card .formkit-alert{padding:12px;border-radius:6px;margin:8px 0 0 !important;text-align:center;font-family:var(--sans);font-size:0.85rem;list-style:none;}
+.form-card .formkit-alert:empty{display:none !important;margin:0 !important;padding:0 !important;border:0 !important;}
 .form-card .formkit-alert-success{background:#d3fbeb;border:1px solid #10bf7a;color:#0c905c;}
 .form-card .formkit-alert-error{background:#fde8e2;border:1px solid #f2643b;color:#ea4110;}
 .form-card .formkit-powered-by-convertkit-container,.form-card [data-element="powered-by"]{display:none !important;}
@@ -85,7 +86,7 @@ footer{position:relative;z-index:1;padding:24px 6vw;display:flex;justify-content
 
 @media(min-width:640px){
   .hero{padding:140px 48px 80px;}
-  .form-card{padding:32px;}
+  .form-card{padding:24px;}
 }
 </style>
 </head>
