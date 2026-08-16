@@ -124,7 +124,7 @@ gtag('config', 'G-ZLHLK63G32');
     </div>
 
     <div class="step" data-step="1" data-field="name" data-required="true">
-      <span class="eyebrow">Question 1 of 7</span>
+      <span class="eyebrow">Question 1 of 8</span>
       <h2 class="q-title">First up, what should I call you?</h2>
       <p class="q-hint">Otherwise I'll be forced to call you 'mate' ;) 🇦🇺</p>
       <div class="field">
@@ -138,7 +138,7 @@ gtag('config', 'G-ZLHLK63G32');
     </div>
 
     <div class="step" data-step="2" data-field="email" data-required="true" data-type="email">
-      <span class="eyebrow">Question 2 of 7</span>
+      <span class="eyebrow">Question 2 of 8</span>
       <h2 class="q-title">Best email to reach you on?</h2>
       <p class="q-hint">This is where your application outcome lands. Make sure it's one you check.</p>
       <div class="field">
@@ -151,8 +151,21 @@ gtag('config', 'G-ZLHLK63G32');
       </div>
     </div>
 
-    <div class="step" data-step="3" data-field="segment" data-required="true">
-      <span class="eyebrow">Question 3 of 7</span>
+        <div class="step" data-step="3" data-field="instagram">
+      <span class="eyebrow">Question 3 of 8</span>
+      <h2 class="q-title">What's your <em>Instagram</em> handle?</h2>
+      <p class="q-hint">Optional. Helps me connect the dots if you're one of the folks who commented on the reel.</p>
+      <div class="field">
+        <input class="input" type="text" name="instagram" placeholder="@yourhandle">
+      </div>
+      <div class="controls">
+        <button class="btn btn-ghost" data-back>← Back</button>
+        <button class="btn btn-primary" data-next>Next →</button>
+      </div>
+    </div>
+
+<div class="step" data-step="4" data-field="segment" data-required="true">
+      <span class="eyebrow">Question 4 of 8</span>
       <h2 class="q-title">Which sounds most like <em>you</em> right now?</h2>
       <p class="q-hint">No wrong answer. It just tells me where you're starting from.</p>
       <div class="choices">
@@ -168,8 +181,8 @@ gtag('config', 'G-ZLHLK63G32');
       </div>
     </div>
 
-    <div class="step" data-step="4" data-field="workUrl" data-required="true">
-      <span class="eyebrow">Question 4 of 7</span>
+    <div class="step" data-step="5" data-field="workUrl" data-required="true">
+      <span class="eyebrow">Question 5 of 8</span>
       <h2 class="q-title">Where can I see your <em>work?</em></h2>
       <p class="q-hint">Drop a link to your best stuff. A reel, YouTube, Instagram, a portfolio… whatever shows me what you can do.</p>
       <div class="field">
@@ -182,8 +195,8 @@ gtag('config', 'G-ZLHLK63G32');
       </div>
     </div>
 
-    <div class="step" data-step="5" data-field="earning" data-required="true">
-      <span class="eyebrow">Question 5 of 7</span>
+    <div class="step" data-step="6" data-field="earning" data-required="true">
+      <span class="eyebrow">Question 6 of 8</span>
       <h2 class="q-title">Are you earning from video <em>yet?</em></h2>
       <p class="q-hint">Be honest. Beginners are welcome. I just want to know where you're at.</p>
       <div class="choices">
@@ -199,8 +212,8 @@ gtag('config', 'G-ZLHLK63G32');
       </div>
     </div>
 
-    <div class="step" data-step="6" data-field="goal" data-required="true">
-      <span class="eyebrow">Question 6 of 7</span>
+    <div class="step" data-step="7" data-field="goal" data-required="true">
+      <span class="eyebrow">Question 7 of 8</span>
       <h2 class="q-title">What do you want to be true <em>12 months</em> from now?</h2>
       <p class="q-hint">Paint me the picture. This is the gap Northstar is built to close.</p>
       <div class="field">
@@ -213,8 +226,8 @@ gtag('config', 'G-ZLHLK63G32');
       </div>
     </div>
 
-    <div class="step" data-step="7" data-field="commitment" data-required="true">
-      <span class="eyebrow">Question 7 of 7</span>
+    <div class="step" data-step="8" data-field="commitment" data-required="true">
+      <span class="eyebrow">Question 8 of 8</span>
       <p class="q-context">Northstar runs across 12 weeks and 12 live calls. By the end, you'll release a <em>signature piece</em> publicly, even if it scares you.</p>
       <h2 class="q-title">Ready for <em>that?</em></h2>
       <div class="choices">
@@ -253,7 +266,7 @@ const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzspetOD4HKB-ZJ
 
 const steps = Array.from(document.querySelectorAll('.step'));
 const progressEl = document.getElementById('progress');
-const order = ['intro','1','2','3','4','5','6','7','done'];
+const order = ['intro','1','2','3','4','5','6','7','8','done'];
 let currentIdx = 0;
 const data = {};
 
@@ -268,7 +281,7 @@ function show(stepKey){
   if(stepKey === 'intro' || stepKey === 'done' || stepKey === 'error'){
     progressEl.textContent = 'Application';
   } else {
-    progressEl.textContent = stepKey + ' / 7';
+    progressEl.textContent = stepKey + ' / 8';
   }
   const focusable = next.querySelector('input:not([type=radio]), textarea');
   if(focusable) setTimeout(() => focusable.focus(), 250);
