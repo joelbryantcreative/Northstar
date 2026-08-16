@@ -95,6 +95,14 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
   .stage{padding:140px 48px 64px;}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHLK63G32"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZLHLK63G32');
+</script>
 </head>
 <body>
 
@@ -342,6 +350,14 @@ async function submit(){
       headers: {'Content-Type': 'text/plain;charset=utf-8'},
       body: JSON.stringify(payload)
     });
+    if (typeof gtag === 'function') {
+      gtag('event', 'generate_lead', {
+        form_name: 'apply',
+        segment: data.segment || '',
+        earning: data.earning || '',
+        commitment: data.commitment || ''
+      });
+    }
     show('done');
   } catch(e){
     show('error');

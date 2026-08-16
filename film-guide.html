@@ -89,6 +89,14 @@ footer{position:relative;z-index:1;padding:24px 6vw;display:flex;justify-content
   .form-card{padding:24px;}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHLK63G32"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZLHLK63G32');
+</script>
 </head>
 <body>
 
@@ -141,5 +149,16 @@ document.addEventListener('input', function(e){
 }, true);
 </script>
 
+
+<script>
+document.addEventListener('submit', function(e){
+  var f = e.target;
+  if (f && f.matches && f.matches('.kit-fallback, .formkit-form')) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'sign_up', { form_name: 'film_guide' });
+    }
+  }
+}, true);
+</script>
 </body>
 </html>

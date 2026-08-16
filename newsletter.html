@@ -122,6 +122,14 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
   .section{padding:100px 80px;}
 }
 </style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZLHLK63G32"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-ZLHLK63G32');
+</script>
 </head>
 <body>
 
@@ -193,5 +201,16 @@ body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weigh
   <a href="#top" class="final-cta-btn">I'm In</a>
 </section>
 
+
+<script>
+document.addEventListener('submit', function(e){
+  var f = e.target;
+  if (f && f.matches && f.matches('.kit-fallback, .formkit-form')) {
+    if (typeof gtag === 'function') {
+      gtag('event', 'sign_up', { form_name: 'newsletter' });
+    }
+  }
+}, true);
+</script>
 </body>
 </html>
