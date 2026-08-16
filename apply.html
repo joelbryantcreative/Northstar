@@ -7,6 +7,8 @@
 <meta name="description" content="Apply for the next Northstar cohort. Ten seats. Twelve weeks. Application only.">
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/jpeg" href="images/favicon.jpg">
+<link rel="preconnect" href="https://joelbryant.kit.com" crossorigin>
+<link rel="dns-prefetch" href="https://script.google.com">
 <style>
 @font-face{font-family:'Canela Text';src:url('fonts/CanelaText-Regular.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
 @font-face{font-family:'Canela Text';src:url('fonts/CanelaText-RegularItalic.woff2') format('woff2');font-weight:400;font-style:italic;font-display:block;}
@@ -97,7 +99,7 @@ body{background:var(--ink);color:var(--cream);font-family:var(--sans);font-weigh
 <body>
 
 <nav class="nav">
-  <a href="/" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar"></a>
+  <a href="/" class="nav-logo"><img src="images/Main-Logo.png" alt="Northstar" loading="lazy" decoding="async"></a>
   <span class="nav-progress" id="progress">Application</span>
 </nav>
 
@@ -316,9 +318,17 @@ async function submit(){
   const step = currentStep();
   if(!step) return;
   if(!validate(step)) return;
+  const attribution = (typeof window.__ns_getAttr === 'function') ? window.__ns_getAttr() : {};
   const payload = Object.assign({}, data, {
     source: 'Apply form',
-    timestamp: new Date().toISOString()
+    timestamp: new Date().toISOString(),
+    utm_source: attribution.utm_source || '',
+    utm_medium: attribution.utm_medium || '',
+    utm_campaign: attribution.utm_campaign || '',
+    utm_content: attribution.utm_content || '',
+    utm_term: attribution.utm_term || '',
+    referrer: attribution.referrer || '',
+    landing_page: attribution.landing_page || ''
   });
   const btn = step.querySelector('[data-submit]');
   if(btn){ btn.disabled = true; btn.textContent = 'Sending…'; }
@@ -365,5 +375,50 @@ document.querySelectorAll('.choice input').forEach(i => {
 show('intro');
 </script>
 
+
+<script>
+(function(){
+  try {
+    var KEY = 'ns_attr';
+    var params = new URLSearchParams(location.search);
+    var utmKeys = ['utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+    var stored = null;
+    try { stored = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch(e){}
+    if (!stored) {
+      var hasUtm = utmKeys.some(function(k){ return params.get(k); });
+      if (hasUtm || document.referrer) {
+        var a = {};
+        utmKeys.forEach(function(k){ if (params.get(k)) a[k] = params.get(k); });
+        a.referrer = document.referrer || '';
+        a.landing_page = location.pathname + location.search;
+        try { sessionStorage.setItem(KEY, JSON.stringify(a)); } catch(e){}
+        stored = a;
+      }
+    }
+    window.__ns_getAttr = function(){ return stored || {}; };
+    function decorate(){
+      if (!stored) return;
+      document.querySelectorAll('a[href]').forEach(function(link){
+        try {
+          var u = new URL(link.getAttribute('href'), location.href);
+          if (u.host !== location.host) return;
+          if (u.protocol !== location.protocol) return;
+          Object.keys(stored).forEach(function(k){
+            if (k.indexOf('utm_') === 0 && stored[k] && !u.searchParams.has(k)) {
+              u.searchParams.set(k, stored[k]);
+            }
+          });
+          link.setAttribute('href', u.pathname + u.search + u.hash);
+        } catch(e){}
+      });
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', decorate);
+    } else {
+      decorate();
+    }
+  } catch(e){}
+})();
+</script>
 </body>
 </html>
